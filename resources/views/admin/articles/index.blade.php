@@ -1,44 +1,61 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Manage Articles') }}
+            <h2 class="font-bold text-2xl text-slate-800 leading-tight flex items-center gap-2">
+                <i class="fa-solid fa-newspaper text-primary/70"></i> {{ __('Kelola Berita') }}
             </h2>
-            <a href="{{ route('admin.articles.create') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm transition">Add New Article</a>
+            <a href="{{ route('admin.articles.create') }}" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+                <i class="fa-solid fa-plus"></i> Berita Baru
+            </a>
         </div>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 overflow-x-auto">
-                    <table class="w-full whitespace-nowrap">
+    <div class="py-6">
+        <div class="max-w-full mx-auto">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="p-0 overflow-x-auto">
+                    <table class="w-full whitespace-nowrap text-left border-collapse">
                         <thead>
-                            <tr class="text-left font-bold text-gray-600 border-b border-gray-200">
-                                <th class="pb-3 px-4">Title</th>
-                                <th class="pb-3 px-4">Category</th>
-                                <th class="pb-3 px-4">Date</th>
-                                <th class="pb-3 px-4">Actions</th>
+                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-bold">Judul Artikel</th>
+                                <th class="py-4 px-6 font-bold">Kategori</th>
+                                <th class="py-4 px-6 font-bold">Tanggal</th>
+                                <th class="py-4 px-6 font-bold text-center">Aksi</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="divide-y divide-slate-100">
                             @forelse($articles as $article)
-                            <tr class="hover:bg-gray-50 border-b border-gray-100">
-                                <td class="py-3 px-4">{{ $article->title }}</td>
-                                <td class="py-3 px-4">{{ $article->category }}</td>
-                                <td class="py-3 px-4">{{ $article->date }}</td>
-                                <td class="py-3 px-4">
-                                    <a href="{{ route('admin.articles.edit', $article->id) }}" class="text-blue-500 hover:text-blue-700 mr-2">Edit</a>
-                                    <form action="{{ route('admin.articles.destroy', $article->id) }}" method="POST" class="inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="text-red-500 hover:text-red-700" onclick="return confirm('Are you sure?')">Delete</button>
-                                    </form>
+                            <tr class="hover:bg-emerald-50/50 transition duration-150">
+                                <td class="py-4 px-6 font-medium text-slate-800">{{ $article->title }}</td>
+                                <td class="py-4 px-6">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                                        {{ $article->category }}
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 text-sm">{{ \Carbon\Carbon::parse($article->date)->format('d M Y') }}</td>
+                                <td class="py-4 px-6 text-center">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <a href="{{ route('admin.articles.edit', $article->id) }}" class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
+                                            <i class="fa-solid fa-pen-to-square text-sm"></i>
+                                        </a>
+                                        <form action="{{ route('admin.articles.destroy', $article->id) }}" method="POST" class="inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="w-8 h-8 rounded-lg bg-red-50 text-red-600 hover:bg-red-500 hover:text-white flex items-center justify-center transition tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus artikel ini?')">
+                                                <i class="fa-solid fa-trash-can text-sm"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="4" class="py-4 px-4 text-center text-gray-500">No articles found.</td>
+                                <td colspan="4" class="py-12 px-6 text-center">
+                                    <div class="flex flex-col items-center justify-center text-slate-400">
+                                        <i class="fa-regular fa-folder-open text-4xl mb-3 opacity-50"></i>
+                                        <p class="text-sm">Belum ada artikel yang dipublikasikan.</p>
+                                    </div>
+                                </td>
                             </tr>
                             @endforelse
                         </tbody>

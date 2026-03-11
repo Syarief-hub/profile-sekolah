@@ -40,7 +40,7 @@
                 <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4 group-hover:bg-secondary/10 transition duration-700"></div>
                 
                 <div class="flex items-center gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
-                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
+                    <div class="w-14 h-14 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
                         <i class="fa-solid fa-clock-rotate-left"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Perjalanan Waktu</h2>

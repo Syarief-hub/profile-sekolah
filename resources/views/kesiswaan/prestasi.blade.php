@@ -40,7 +40,7 @@
                 
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 flex-shrink-0 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
+                        <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <div>

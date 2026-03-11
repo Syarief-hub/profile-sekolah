@@ -28,10 +28,10 @@
                     },
                     colors: {
                         primary: {
-                            DEFAULT: '#2563eb', // Blue-600
-                            100: '#dbeafe',
+                            DEFAULT: '#059669', // Emerald 600
+                            100: '#d1fae5',
                         },
-                        secondary: '#facc15', // Yellow-400
+                        secondary: '#f59e0b', // Amber 500
                     }
                 }
             }

@@ -39,7 +39,7 @@
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
                 <div class="flex items-center gap-4 mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
+                    <div class="w-14 h-14 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Visi Sekolah</h2>
@@ -80,19 +80,19 @@
                         </h3>
                         <ul class="space-y-4 text-slate-600">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">1</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">1</span>
                                 <span class="leading-relaxed">Menciptakan suasana religius di sekolah melalui kegiatan keagamaan.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">2</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">2</span>
                                 <span class="leading-relaxed">Melaksanakan kegiatan belajar mengajar yang berorientasi pada peningkatan kemampuan dan kompetensi peserta didik.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">3</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">3</span>
                                 <span class="leading-relaxed">Membentuk peserta didik yang sadar pentingnya ilmu pengetahuan dan teknologi yang berlandaskan nilai spiritual dan sosial.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">4</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">4</span>
                                 <span class="leading-relaxed">Meningkatkan pendidikan karakter bangsa melalui implementasi penguatan pendidikan karakter.</span>
                             </li>
                         </ul>

@@ -9,11 +9,9 @@
             <!-- Kolom 1: Deskripsi Sekolah (Span 4 cols) -->
             <div class="lg:col-span-4">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white text-2xl shadow-lg p-1 border border-blue-500">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo SMAN 1 Suwawa" class="h-12 w-auto object-contain drop-shadow-sm">
                     <div class="flex flex-col">
-                        <span class="font-heading font-bold text-2xl text-white leading-none tracking-tight">SMAN 1</span>
+                        <span class="font-heading font-bold text-2xl text-slate-800 leading-none tracking-tight">SMAN 1</span>
                         <span class="font-bold text-primary text-sm leading-none tracking-widest mt-1">SUWAWA</span>
                     </div>
                 </div>
@@ -49,13 +47,13 @@
                         <div class="w-10 h-10 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center border border-slate-700">
                             <i class="fa-solid fa-location-dot text-primary text-base"></i>
                         </div>
-                        <span class="mt-1 leading-relaxed">Jl. Pendidikan No. 123, Kabupaten Bone Bolango, Provinsi Gorontalo 94567</span>
+                        <span class="mt-1 leading-relaxed">Tingkohubu Tim., Kec. Suwawa, Kabupaten Bone Bolango, Gorontalo 96113</span>
                     </li>
                     <li class="flex items-center gap-4">
                         <div class="w-10 h-10 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center border border-slate-700">
                             <i class="fa-solid fa-phone text-primary text-base"></i>
                         </div>
-                        <span class="font-medium">+62 812-3456-7890</span>
+                        <span class="font-medium">(0435) 8591620</span>
                     </li>
                     <li class="flex items-center gap-4">
                         <div class="w-10 h-10 rounded-full bg-slate-800 flex-shrink-0 flex items-center justify-center border border-slate-700">
@@ -76,7 +74,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                     
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="https://maps.google.com" target="_blank" class="bg-primary hover:bg-blue-600 text-white text-xs px-4 py-2 rounded-full font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 flex items-center gap-2">
+                        <a href="https://maps.google.com" target="_blank" class="bg-primary hover:bg-emerald-600 text-white text-xs px-4 py-2 rounded-full font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 flex items-center gap-2">
                             <i class="fa-solid fa-map-location-dot"></i> Buka Peta
                         </a>
                     </div>
