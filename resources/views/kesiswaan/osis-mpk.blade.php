@@ -50,12 +50,126 @@
                     </div>
                 </div>
                 
-                <div class="relative z-10 text-center py-16 px-4 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
-                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-slate-400 text-3xl mx-auto mb-6 shadow-sm border border-slate-100">
-                        <i class="fa-solid fa-people-group"></i>
+                <div class="space-y-16 relative z-10 py-4">
+                    
+                    <!-- Intro OSIS & MPK -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Card OSIS -->
+                        <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 border border-indigo-100 flex flex-col items-center text-center shadow-sm relative overflow-hidden group hover:shadow-md transition duration-300">
+                            <div class="absolute -right-10 -top-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition duration-500"></div>
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-md mb-6 relative z-10 text-indigo-600 border border-indigo-50">
+                                <i class="fa-solid fa-users-viewfinder text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-800 mb-3 tracking-tight">OSIS SMAN 1 Suwawa</h3>
+                            <div class="h-1 w-12 bg-indigo-500 rounded-full mb-4 mx-auto"></div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Organisasi Siswa Intra Sekolah (OSIS) adalah wadah pembinaan generasi muda di lingkungan sekolah untuk mengembangkan potensi, karakter, kepemimpinan, dan kemandirian siswa secara kolektif.</p>
+                            <span class="mt-auto px-4 py-1.5 bg-white text-indigo-700 text-xs font-bold rounded-lg border border-indigo-100 shadow-sm uppercase tracking-wider">Eksekutif Siswa</span>
+                        </div>
+                        
+                        <!-- Card MPK -->
+                        <div class="bg-gradient-to-br from-purple-50 to-fuchsia-50 rounded-3xl p-8 border border-purple-100 flex flex-col items-center text-center shadow-sm relative overflow-hidden group hover:shadow-md transition duration-300">
+                            <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition duration-500"></div>
+                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-md mb-6 relative z-10 text-purple-600 border border-purple-50">
+                                <i class="fa-solid fa-scale-balanced text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-800 mb-3 tracking-tight">MPK SMAN 1 Suwawa</h3>
+                            <div class="h-1 w-12 bg-purple-500 rounded-full mb-4 mx-auto"></div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Majelis Perwakilan Kelas (MPK) merupakan badan legislatif tingkat siswa yang bertugas mengawasi, mengevaluasi, dan menampung aspirasi siswa untuk kemajuan tata kelola berbagai program OSIS.</p>
+                            <span class="mt-auto px-4 py-1.5 bg-white text-purple-700 text-xs font-bold rounded-lg border border-purple-100 shadow-sm uppercase tracking-wider">Legislatif Siswa</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-700 mb-2">Data Pengurus Belum Tersedia</h3>
-                    <p class="text-slate-500 max-w-md mx-auto mb-8">Informasi visi misi, struktur kepengurusan, dan program kerja OSIS/MPK sedang disusun. Silakan hubungi admin untuk memperbarui informasi ini.</p>
+
+                    <!-- Visi & Misi -->
+                    <div class="bg-white rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-5">
+                            <div class="md:col-span-2 bg-gradient-to-br from-slate-800 to-slate-900 p-8 md:p-10 text-white flex flex-col justify-center relative overflow-hidden">
+                                <i class="fa-solid fa-quote-left py-2 text-8xl absolute top-4 left-6 opacity-10"></i>
+                                <div class="relative z-10">
+                                    <div class="inline-block px-3 py-1 mb-4 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest border border-emerald-500/30">Visi Organisasi</div>
+                                    <h3 class="font-bold text-2xl lg:text-3xl leading-snug mb-6">"Menjadikan siswa-siswi SMAN 1 Suwawa berkarakter, inovatif, dan berprestasi berlandaskan IMTAK dan IPTEK."</h3>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center border border-slate-600">
+                                            <i class="fa-solid fa-bullseye text-emerald-400"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs text-slate-400 uppercase tracking-widest font-bold">Periode Berjalan</div>
+                                            <div class="font-bold">Kepengurusan Aktif</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8 md:p-10">
+                                <h4 class="font-black text-2xl text-slate-800 mb-6 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-list-check"></i></div>
+                                    Misi Utama OSIS
+                               </h4>
+                                <ul class="space-y-4">
+                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
+                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">1</div>
+                                        <div>
+                                            <h5 class="font-bold text-slate-800 mb-1">Meningkatkan Kedisiplinan</h5>
+                                            <p class="text-slate-600 text-sm">Menanamkan sikap disiplin dan patuh terhadap tata tertib tertulis maupun tidak tertulis di sekolah.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
+                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">2</div>
+                                        <div>
+                                            <h5 class="font-bold text-slate-800 mb-1">Pengembangan Minat Bakat</h5>
+                                            <p class="text-slate-600 text-sm">Menyelenggarakan kegiatan ekstrakurikuler serta ajang lomba intern guna memfasilitasi ragam minat dan talenta siswa.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
+                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">3</div>
+                                        <div>
+                                            <h5 class="font-bold text-slate-800 mb-1">Kepedulian Sosial & Lingkungan</h5>
+                                            <p class="text-slate-600 text-sm">Menumbuhkan kepekaan sosial dan solidaritas antar warga sekolah maupun masyarakat secara umum.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program Kerja OSIS -->
+                    <div>
+                        <div class="flex items-center gap-4 mb-8">
+                            <h3 class="text-2xl font-black text-slate-800 tracking-tight">Program Kerja Unggulan</h3>
+                            <div class="flex-1 h-px bg-slate-200"></div>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded">Highlight Program</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Prog 1 -->
+                            <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
+                                <div class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-blue-100 group-hover:rotate-6 transition duration-300">
+                                    <i class="fa-solid fa-trophy"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Class Meeting & Porseni</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">Ajang kompetisi olahraga dan seni antar kelas rutin yang selalu digemari dan dilaksanakan pasca ujian semester demi memperkokoh ikatan persaudaraan.</p>
+                            </div>
+                            
+                            <!-- Prog 2 -->
+                            <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
+                                <div class="absolute inset-x-0 bottom-0 h-1 bg-emerald-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                                <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-emerald-100 group-hover:rotate-6 transition duration-300">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Gerakan Lingkungan Bersih</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">Program kolaborasi pemeliharaan lingkungan sekolah dengan konsep go-green, mendaur ulang sampah, serta inisiatif memperindah area kelas.</p>
+                            </div>
+
+                            <!-- Prog 3 -->
+                            <div class="bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-lg hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
+                                <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                                <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-amber-100 group-hover:rotate-6 transition duration-300">
+                                    <i class="fa-solid fa-calendar-star"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Perayaan Hari Besar</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">Penyelenggaraan acara religius & kebangsaan yang atraktif seperti perayaan kemerdekaan 17 Agustus, Sumpah Pemuda, dan kegiatan hari keagamaan.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>

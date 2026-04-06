@@ -50,12 +50,107 @@
                     </div>
                 </div>
                 
-                <div class="relative z-10 text-center py-16 px-4 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
-                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-slate-400 text-3xl mx-auto mb-6 shadow-sm border border-slate-100">
-                        <i class="fa-solid fa-image"></i>
+                <div class="space-y-12 relative z-10 py-8">
+                    <!-- Level 1: Kepala Sekolah -->
+                    <div class="flex flex-col items-center relative">
+                        <div class="bg-white border border-slate-200 shadow-xl rounded-3xl p-8 text-center w-full max-w-sm relative overflow-hidden group hover:shadow-2xl hover:border-primary/30 transition-all duration-300 z-10">
+                            <div class="absolute top-0 inset-x-0 h-2 bg-primary"></div>
+                            <div class="w-24 h-24 bg-slate-50 border-4 border-white shadow-md rounded-full mx-auto flex items-center justify-center mb-5 text-primary text-4xl group-hover:scale-110 group-hover:bg-primary/5 transition-transform duration-300">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="font-black text-2xl text-slate-800 mb-1">Nama Lengkap, M.Pd</h3>
+                            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold">
+                                Kepala Sekolah
+                            </span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-700 mb-2">Gambar Struktur Organisasi Belum Tersedia</h3>
-                    <p class="text-slate-500 max-w-md mx-auto mb-8">Data bagan/bagan struktur organisasi sedang disiapkan. Silakan hubungi admin untuk memperbarui informasi ini.</p>
+
+                    <!-- PENGHUBUNG KEPSEK KE BAWAH -->
+                    <div class="hidden md:flex justify-center -my-12 relative z-0">
+                        <div class="w-px h-16 bg-gradient-to-b from-primary/50 to-slate-200"></div>
+                    </div>
+
+                    <!-- Level 2: Komite & Kepala Tata Usaha -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-6 md:pt-0">
+                        <div class="bg-white border border-slate-100 shadow-lg rounded-2xl p-6 flex items-center gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-rose-500">
+                            <div class="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-500 text-2xl flex-shrink-0">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-800">Nama Ketua Komite</h3>
+                                <p class="text-rose-500 font-medium text-sm">Ketua Komite Sekolah</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-slate-100 shadow-lg rounded-2xl p-6 flex items-center gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-slate-700">
+                            <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-700 text-2xl flex-shrink-0">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-800">Nama Kepala TU</h3>
+                                <p class="text-slate-600 font-medium text-sm">Kepala Tata Usaha</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PENGHUBUNG KE WAKASEK -->
+                    <div class="hidden md:flex justify-center -my-12 relative z-0">
+                        <div class="w-px h-16 bg-slate-200"></div>
+                    </div>
+
+                    <!-- Level 3: Wakil Kepala Sekolah -->
+                    <div class="relative pt-8 md:pt-4">
+                        <!-- Garis Horizontal Penghubung (Hanya Desktop) -->
+                        <div class="absolute top-4 left-[12.5%] w-[75%] h-px bg-slate-200 hidden md:block"></div>
+                        <div class="absolute top-4 left-[12.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
+                        <div class="absolute top-4 left-[37.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
+                        <div class="absolute top-4 left-[62.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
+                        <div class="absolute top-4 left-[87.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
+                        
+                        <h3 class="text-center font-bold text-slate-400 uppercase tracking-widest text-sm mb-6 mt-2 relative inline-block mx-auto w-full md:bg-slate-50 md:z-10">Jajaran Wakil Kepala Sekolah</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Waka Kurikulum -->
+                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-blue-500 group relative overflow-hidden">
+                                <div class="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="w-14 h-14 bg-blue-50 rounded-full mx-auto flex items-center justify-center mb-4 text-blue-500 text-xl relative z-10 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 border border-blue-100">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">Nama Waka 1</h4>
+                                <p class="text-xs font-semibold text-blue-600 relative z-10">Urusan Kurikulum</p>
+                            </div>
+
+                            <!-- Waka Kesiswaan -->
+                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-emerald-500 group relative overflow-hidden">
+                                <div class="absolute inset-0 bg-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="w-14 h-14 bg-emerald-50 rounded-full mx-auto flex items-center justify-center mb-4 text-emerald-500 text-xl relative z-10 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300 border border-emerald-100">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">Nama Waka 2</h4>
+                                <p class="text-xs font-semibold text-emerald-600 relative z-10">Urusan Kesiswaan</p>
+                            </div>
+
+                            <!-- Waka Sarpras -->
+                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-amber-500 group relative overflow-hidden">
+                                <div class="absolute inset-0 bg-amber-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="w-14 h-14 bg-amber-50 rounded-full mx-auto flex items-center justify-center mb-4 text-amber-500 text-xl relative z-10 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300 border border-amber-100">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">Nama Waka 3</h4>
+                                <p class="text-xs font-semibold text-amber-600 relative z-10">Urusan Sarana & Prasarana</p>
+                            </div>
+
+                            <!-- Waka Humas -->
+                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-purple-500 group relative overflow-hidden">
+                                <div class="absolute inset-0 bg-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div class="w-14 h-14 bg-purple-50 rounded-full mx-auto flex items-center justify-center mb-4 text-purple-500 text-xl relative z-10 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300 border border-purple-100">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">Nama Waka 4</h4>
+                                <p class="text-xs font-semibold text-purple-600 relative z-10">Urusan Humas</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>

@@ -36,13 +36,13 @@ Route::view('/profil/struktur-organisasi', 'profil.struktur-organisasi')->name('
 Route::view('/profil/fasilitas', 'profil.fasilitas')->name('profil.fasilitas');
 
 // Akademik Routes
-Route::view('/akademik/guru-staf', 'akademik.guru-staf')->name('akademik.guru-staf');
+Route::get('/akademik/guru-staf', [PageController::class, 'guruStaf'])->name('akademik.guru-staf');
 Route::view('/akademik/kurikulum', 'akademik.kurikulum')->name('akademik.kurikulum');
 
 // Kesiswaan Routes
 Route::view('/kesiswaan/osis-mpk', 'kesiswaan.osis-mpk')->name('kesiswaan.osis-mpk');
-Route::view('/kesiswaan/ekstrakurikuler', 'kesiswaan.ekstrakurikuler')->name('kesiswaan.ekstrakurikuler');
-Route::view('/kesiswaan/prestasi', 'kesiswaan.prestasi')->name('kesiswaan.prestasi');
+Route::get('/kesiswaan/ekstrakurikuler', [PageController::class, 'ekstrakurikuler'])->name('kesiswaan.ekstrakurikuler');
+Route::get('/kesiswaan/prestasi', [PageController::class, 'prestasi'])->name('kesiswaan.prestasi');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -53,6 +53,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::resource('articles', \App\Http\Controllers\Admin\ArticleController::class);
     Route::resource('galleries', \App\Http\Controllers\Admin\GalleryController::class);
+    Route::resource('employees', \App\Http\Controllers\Admin\EmployeeController::class)->except(['show']);
+    Route::resource('extracurriculars', \App\Http\Controllers\Admin\ExtracurricularController::class)->except(['show']);
+    Route::resource('achievements', \App\Http\Controllers\Admin\AchievementController::class)->except(['show']);
     
     // Settings Manager
     Route::get('/settings/sekolah', [SettingController::class, 'editSekolah'])->name('settings.sekolah');
