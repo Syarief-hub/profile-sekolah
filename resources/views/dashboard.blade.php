@@ -17,7 +17,7 @@
                 <div class="px-8 py-10 md:py-12 relative z-10 flex flex-col md:flex-row items-center justify-between">
                     <div class="text-white mb-6 md:mb-0">
                         <h3 class="text-3xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-emerald-100">Halo, {{ Auth::user()->name }}! 👋</h3>
-                        <p class="text-emerald-100 leading-relaxed max-w-2xl">Selamat datang kembali di panel administrasi SMA Negeri 1 Suwawa. Anda dapat mengelola konten website, melihat pesan masuk, dan memperbarui informasi sekolah melalui menu-menu yang tersedia.</p>
+                        <p class="text-emerald-100 leading-relaxed max-w-2xl">Selamat datang kembali di panel administrasi SMA Negeri 1 Suwawa. Anda dapat mengelola konten website dan memperbarui informasi sekolah melalui menu-menu yang tersedia.</p>
                     </div>
                     <div class="hidden lg:block shrink-0">
                         <div class="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md shadow-lg border border-white/30">
@@ -65,15 +65,7 @@
                     <p class="text-slate-500 text-sm">Edit profil dan teks sambutan Kepala Sekolah.</p>
                 </a>
 
-                <!-- Card 4 -->
-                <a href="{{ route('admin.contacts.index') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-slate-100 transition duration-300 transform hover:-translate-y-1 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full -z-10 group-hover:scale-110 transition duration-500"></div>
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition duration-300 shadow-sm">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <h5 class="font-bold text-slate-800 text-lg mb-1 group-hover:text-emerald-600 transition">Kotak Masuk</h5>
-                    <p class="text-slate-500 text-sm">Baca pesan pertanyaan dari pengunjung website.</p>
-                </a>
+
                 @endif
                 
             </div>

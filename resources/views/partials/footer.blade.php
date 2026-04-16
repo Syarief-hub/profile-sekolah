@@ -31,11 +31,11 @@
             <div class="lg:col-span-2">
                 <h4 class="text-white font-bold font-heading mb-6 tracking-wide uppercase text-sm">Tautan Cepat</h4>
                 <ul class="space-y-3 text-sm text-slate-400">
-                    <li><a href="#" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Profil Sekolah</a></li>
-                    <li><a href="#" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Program Studi</a></li>
-                    <li><a href="#" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Agenda Kegiatan</a></li>
-                    <li><a href="#" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Ekstrakurikuler</a></li>
-                    <li><a href="#" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> PPDB Online</a></li>
+                    <li><a href="{{ route('profil.sejarah') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Profil Sekolah</a></li>
+                    <li><a href="{{ route('akademik.kurikulum') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Program Studi</a></li>
+                    <li><a href="{{ route('articles.index') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Agenda Kegiatan</a></li>
+                    <li><a href="{{ route('kesiswaan.ekstrakurikuler') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Ekstrakurikuler</a></li>
+                    <li><a href="{{ route('layanan.ppdb') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> PPDB Online</a></li>
                 </ul>
             </div>
 
@@ -68,16 +68,8 @@
             <div class="lg:col-span-3">
                 <h4 class="text-white font-bold font-heading mb-6 tracking-wide uppercase text-sm">Lokasi Kami</h4>
                 <div class="w-full h-36 bg-slate-800 rounded-xl overflow-hidden relative group border border-slate-700">
-                    <!-- Placeholder Maps Image -->
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400" alt="Map Location" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                    
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <a href="https://maps.google.com" target="_blank" class="bg-primary hover:bg-emerald-600 text-white text-xs px-4 py-2 rounded-full font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 flex items-center gap-2">
-                            <i class="fa-solid fa-map-location-dot"></i> Buka Peta
-                        </a>
-                    </div>
+                    <!-- Interactive Google Maps iframe -->
+                    <iframe src="https://maps.google.com/maps?q=SMAN%201%20Suwawa,%20Bone%20Bolango,%20Gorontalo&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             
@@ -85,7 +77,7 @@
 
         <!-- Copyright -->
         <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-            <p>&copy; {{ date('Y') }} SMA Negeri 1 Suwawa. Seluruh hak cipta dilindungi.</p>
+            <p>&copy; {{ date('Y') }} Universitas Negeri Gorontalo (UNG). Seluruh hak cipta dilindungi.</p>
             <div class="flex gap-6 font-medium">
                 <a href="#" class="hover:text-primary transition">Syarat & Ketentuan</a>
                 <a href="#" class="hover:text-primary transition">Kebijakan Privasi</a>

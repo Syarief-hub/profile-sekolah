@@ -44,6 +44,11 @@ Route::view('/kesiswaan/osis-mpk', 'kesiswaan.osis-mpk')->name('kesiswaan.osis-m
 Route::get('/kesiswaan/ekstrakurikuler', [PageController::class, 'ekstrakurikuler'])->name('kesiswaan.ekstrakurikuler');
 Route::get('/kesiswaan/prestasi', [PageController::class, 'prestasi'])->name('kesiswaan.prestasi');
 
+// Layanan Routes
+Route::view('/layanan/perpustakaan', 'layanan.perpustakaan')->name('layanan.perpustakaan');
+Route::view('/layanan/ppdb', 'layanan.ppdb')->name('layanan.ppdb');
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

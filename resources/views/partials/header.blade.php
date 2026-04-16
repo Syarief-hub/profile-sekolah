@@ -62,8 +62,9 @@
                         Layanan <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg py-2 border border-slate-100 z-50 ring-1 ring-black ring-opacity-5">
-                        <a href="#" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">PPDB Online</a>
-                        <a href="#" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">Download Center</a>
+                        <a href="{{ route('layanan.ppdb') }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">PPDB Online</a>
+
+                        <a href="{{ route('layanan.perpustakaan') }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">Perpustakaan Digital</a>
                     </div>
                 </div>
                 
@@ -74,16 +75,39 @@
             </nav>
 
             <!-- Mobile Menu Toggle Button -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-2xl text-slate-700 focus:outline-none w-10 h-10 flex items-center justify-center rounded hover:bg-slate-100">
-                <i class="fa-solid fa-bars" x-show="!mobileMenuOpen"></i>
-                <i class="fa-solid fa-xmark text-red-500" x-show="mobileMenuOpen" x-cloak style="display: none;"></i>
+            <button @click="mobileMenuOpen = true" class="lg:hidden text-2xl text-slate-700 focus:outline-none w-10 h-10 flex items-center justify-center rounded hover:bg-slate-100 transition">
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu Canvas -->
-    <div x-show="mobileMenuOpen" x-transition.origin.top class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-4 px-4 flex flex-col h-auto max-h-[85vh] overflow-y-auto" x-cloak style="display: none;">
-        <a href="{{ url('/') }}" class="py-3 font-medium text-slate-800 border-b border-slate-100 pl-2">Beranda</a>
+    <!-- Mobile Menu Backdrop -->
+    <div x-show="mobileMenuOpen" x-transition.opacity class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 lg:hidden" @click="mobileMenuOpen = false" x-cloak style="display: none;"></div>
+
+    <!-- Mobile Menu Canvas (Slide from Right) -->
+    <div x-show="mobileMenuOpen" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="transform translate-x-full"
+         x-transition:enter-end="transform translate-x-0"
+         x-transition:leave="transition ease-in duration-300"
+         x-transition:leave-start="transform translate-x-0"
+         x-transition:leave-end="transform translate-x-full"
+         class="lg:hidden fixed top-0 right-0 w-[85%] sm:w-80 h-screen bg-white shadow-2xl z-50 flex flex-col overflow-y-auto" 
+         x-cloak style="display: none;">
+         
+        <!-- Sidebar Header -->
+        <div class="flex items-center justify-between p-5 border-b border-slate-100 mb-2">
+            <div class="flex flex-col">
+                <span class="font-heading font-black text-lg text-slate-800 tracking-tight leading-none">SMAN 1</span>
+                <span class="font-bold text-primary text-[10px] tracking-widest mt-1">SUWAWA</span>
+            </div>
+            <button @click="mobileMenuOpen = false" class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 text-slate-500 hover:bg-red-50 hover:text-red-500 transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <div class="px-4 pb-20 flex flex-col">
+            <a href="{{ url('/') }}" class="py-3 font-medium text-slate-800 border-b border-slate-100 pl-2">Beranda</a>
         
         <!-- Accordion Profil -->
         <div x-data="{ expanded: false }" class="border-b border-slate-100">
@@ -131,15 +155,17 @@
                 <i class="fa-solid fa-chevron-down text-xs transition" :class="expanded ? 'rotate-180 text-primary' : ''"></i>
             </button>
             <div x-show="expanded" class="pl-4 pb-3 flex flex-col gap-1 text-sm text-slate-600" style="display: none;">
-                <a href="#" class="hover:text-primary py-1 block">PPDB Online</a>
-                <a href="#" class="hover:text-primary py-1 block">Download Center</a>
+                <a href="{{ route('layanan.ppdb') }}" class="hover:text-primary py-1 block">PPDB Online</a>
+
+                <a href="{{ route('layanan.perpustakaan') }}" class="hover:text-primary py-1 block">Perpustakaan Digital</a>
             </div>
         </div>
 
-        <div class="mt-6 mb-2 flex flex-col gap-3">
-            <a href="{{ route('login') }}" class="w-full bg-primary hover:bg-emerald-700 text-white text-center py-3 rounded-xl font-semibold transition border border-emerald-600 flex items-center justify-center gap-2">
-                <i class="fa-solid fa-right-to-bracket"></i> Login
+        <div class="mt-8 mb-4 flex flex-col gap-3">
+            <a href="{{ route('login') }}" class="w-full bg-primary hover:bg-emerald-700 text-white text-center py-3.5 rounded-xl font-bold transition shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-right-to-bracket"></i> Login Portal
             </a>
+        </div>
         </div>
     </div>
 </header>

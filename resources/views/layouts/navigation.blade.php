@@ -60,7 +60,7 @@
                             <x-nav-item route="admin.extracurriculars.index" routeGroup="admin.extracurriculars.*" icon="fa-solid fa-volleyball" label="Ekstrakurikuler" />
                             <x-nav-item route="admin.achievements.index" routeGroup="admin.achievements.*" icon="fa-solid fa-trophy" label="Prestasi Siswa" />
                             <x-nav-item route="admin.settings.sekolah" routeGroup="admin.settings.*" icon="fa-solid fa-microphone-lines" label="Profil Sambutan" />
-                            <x-nav-item route="admin.contacts.index" routeGroup="admin.contacts.*" icon="fa-solid fa-envelope-open-text" label="Pesan Masuk" />
+
                         @endif
                     </div>
                 </div>
