@@ -62,8 +62,6 @@
                         Layanan <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg py-2 border border-slate-100 z-50 ring-1 ring-black ring-opacity-5">
-                        <a href="{{ route('layanan.ppdb') }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">PPDB Online</a>
-
                         <a href="{{ route('layanan.perpustakaan') }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50 hover:text-primary hover:font-semibold transition">Perpustakaan Digital</a>
                     </div>
                 </div>
@@ -155,8 +153,6 @@
                 <i class="fa-solid fa-chevron-down text-xs transition" :class="expanded ? 'rotate-180 text-primary' : ''"></i>
             </button>
             <div x-show="expanded" class="pl-4 pb-3 flex flex-col gap-1 text-sm text-slate-600" style="display: none;">
-                <a href="{{ route('layanan.ppdb') }}" class="hover:text-primary py-1 block">PPDB Online</a>
-
                 <a href="{{ route('layanan.perpustakaan') }}" class="hover:text-primary py-1 block">Perpustakaan Digital</a>
             </div>
         </div>

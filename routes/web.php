@@ -46,7 +46,6 @@ Route::get('/kesiswaan/prestasi', [PageController::class, 'prestasi'])->name('ke
 
 // Layanan Routes
 Route::view('/layanan/perpustakaan', 'layanan.perpustakaan')->name('layanan.perpustakaan');
-Route::view('/layanan/ppdb', 'layanan.ppdb')->name('layanan.ppdb');
 
 
 Route::middleware('auth')->group(function () {

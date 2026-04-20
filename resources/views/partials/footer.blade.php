@@ -35,7 +35,6 @@
                     <li><a href="{{ route('akademik.kurikulum') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Program Studi</a></li>
                     <li><a href="{{ route('articles.index') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Agenda Kegiatan</a></li>
                     <li><a href="{{ route('kesiswaan.ekstrakurikuler') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> Ekstrakurikuler</a></li>
-                    <li><a href="{{ route('layanan.ppdb') }}" class="hover:text-primary transition flex items-center gap-2 -ml-2 p-2 hover:bg-slate-800/50 rounded-lg"><i class="fa-solid fa-angle-right text-xs text-primary"></i> PPDB Online</a></li>
                 </ul>
             </div>
 

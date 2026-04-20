@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>@yield('title', 'Profil Sekolah | SMA Negeri 1 Suwawa')</title>
-    <meta name="description" content="@yield('meta_description', 'Website Resmi SMA Negeri 1 Suwawa. Temukan informasi profil, akademik, kesiswaan, prestasi, layanan PPDB dan berita terkini tentang sekolah kami.')">
+    <meta name="description" content="@yield('meta_description', 'Website Resmi SMA Negeri 1 Suwawa. Temukan informasi profil, akademik, kesiswaan, prestasi, dan berita terkini tentang sekolah kami.')">
 
     <!-- Google Fonts: Inter & Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
