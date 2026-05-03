@@ -37,9 +37,20 @@
                             <div>
                                 <h3 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Informasi Umum Beranda</h3>
                                 
-                                <div class="mb-8">
+                                <div class="mb-6">
                                     <label for="hero_badge" class="block text-gray-700 text-sm font-bold mb-2">Teks Badge (Contoh: Tahun Ajaran...):</label>
                                     <input type="text" name="hero_badge" id="hero_badge" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('hero_badge', $settings['hero_badge'] ?? 'Tahun Ajaran 2026/2027') }}" required>
+                                </div>
+
+                                <div class="mb-8">
+                                    <label for="hero_image" class="block text-gray-700 text-sm font-bold mb-2">Foto Beranda Utama: (Siswa Belajar)</label>
+                                    @if(isset($settings['hero_image']) && $settings['hero_image'] !== '')
+                                        <div class="mb-3">
+                                            <img src="{{ Storage::url($settings['hero_image']) }}" alt="Foto Beranda" class="h-32 rounded-lg shadow-sm object-cover border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="hero_image" id="hero_image" class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 transition cursor-pointer border border-slate-200 rounded-lg" accept="image/*">
+                                    <p class="text-xs text-gray-500 mt-2">Biarkan kosong jika tidak ingin mengubah foto. Format: JPG/PNG, Max: 5MB.</p>
                                 </div>
 
                                 <h3 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Profil Kepala Sekolah</h3>
@@ -79,8 +90,14 @@
 
                                 <div class="mb-6">
                                     <label for="principal_message" class="block text-gray-700 text-sm font-bold mb-2">Isi Pesan Sambutan:</label>
-                                    <textarea name="principal_message" id="principal_message" rows="12" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required>{{ old('principal_message', $settings['principal_message'] ?? '') }}</textarea>
-                                    <p class="text-xs text-gray-500 mt-1">Anda bisa menggunakan tag HTML dasar seperti &lt;p&gt;, &lt;b&gt;, atau &lt;br&gt; untuk format teks.</p>
+                                    <textarea name="principal_message" id="principal_message" rows="8" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required>{{ old('principal_message', $settings['principal_message'] ?? '') }}</textarea>
+                                    <p class="text-xs text-gray-500 mt-1">Anda tidak perlu menggunakan tag HTML lagi. Tekan Enter untuk paragraf baru.</p>
+                                </div>
+
+                                <div class="mb-6">
+                                    <label for="principal_quote" class="block text-gray-700 text-sm font-bold mb-2">Quote / Motto Sambutan (Opsional):</label>
+                                    <input type="text" name="principal_quote" id="principal_quote" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('principal_quote', $settings['principal_quote'] ?? '') }}">
+                                    <p class="text-xs text-gray-500 mt-1">Contoh: Bersama wujudkan SMAN 1 Suwawa HEBAT...</p>
                                 </div>
                             </div>
                         </div>

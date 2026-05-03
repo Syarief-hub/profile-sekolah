@@ -28,10 +28,13 @@
                     },
                     colors: {
                         primary: {
-                            DEFAULT: '#059669', // Emerald 600
-                            100: '#d1fae5',
+                            DEFAULT: '#10b981', // Emerald 500
+                            100: '#d1fae5', 
                         },
-                        secondary: '#f59e0b', // Amber 500
+                        secondary: '#f97316', // Orange 500
+                        brand: {
+                            dark: '#022c22', // Teal 950
+                        }
                     }
                 }
             }
@@ -43,14 +46,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
-        
-        /* Glassmorphism Effect */
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
     </style>
 </head>
 <body class="antialiased bg-slate-50 text-slate-800 flex flex-col min-h-screen">

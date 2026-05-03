@@ -33,7 +33,7 @@
                     
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="flex items-center gap-2 text-slate-500 text-sm mb-4 font-medium">
-                            <i class="fa-regular fa-calendar-days text-primary"></i> {{ $article->created_at->translatedFormat('d F Y') }}
+                            <i class="fa-regular fa-calendar-days text-primary"></i> {{ $article->date->translatedFormat('d F Y') }}
                         </div>
                         
                         <h3 class="text-xl lg:text-2xl font-heading font-bold text-slate-800 mb-4 group-hover:text-primary transition leading-snug line-clamp-3">

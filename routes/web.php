@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // Get latest 3 published articles for the welcome page
-    $latest_articles = \App\Models\Article::latest()
+    $latest_articles = \App\Models\Article::latest('date')
         ->take(3)
         ->get();
         
-    // Get latest 6 galleries for the welcome page
+    // Get latest 3 galleries for the welcome page
     $latest_galleries = \App\Models\Gallery::latest()
-        ->take(6)
+        ->take(3)
         ->get();
 
     return view('welcome', compact('latest_articles', 'latest_galleries'));
@@ -64,6 +64,8 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     // Settings Manager
     Route::get('/settings/sekolah', [SettingController::class, 'editSekolah'])->name('settings.sekolah');
     Route::put('/settings/sekolah', [SettingController::class, 'updateSekolah'])->name('settings.sekolah.update');
+    Route::get('/settings/struktur', [SettingController::class, 'editStruktur'])->name('settings.struktur');
+    Route::put('/settings/struktur', [SettingController::class, 'updateStruktur'])->name('settings.struktur.update');
     Route::resource('contacts', \App\Http\Controllers\Admin\ContactController::class)->only(['index', 'show', 'destroy']);
 });
 

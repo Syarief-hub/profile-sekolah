@@ -46,7 +46,7 @@
                 </div>
                 <div class="flex items-center gap-2">
                     <i class="fa-regular fa-calendar-days text-primary text-base"></i> 
-                    <span>{{ $article->created_at->translatedFormat('l, d F Y') }}</span>
+                    <span>{{ $article->date->translatedFormat('l, d F Y') }}</span>
                 </div>
             </div>
         </header>

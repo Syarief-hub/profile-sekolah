@@ -59,7 +59,8 @@
                             <x-nav-item route="admin.employees.index" routeGroup="admin.employees.*" icon="fa-solid fa-users-viewfinder" label="Guru & Staf" />
                             <x-nav-item route="admin.extracurriculars.index" routeGroup="admin.extracurriculars.*" icon="fa-solid fa-volleyball" label="Ekstrakurikuler" />
                             <x-nav-item route="admin.achievements.index" routeGroup="admin.achievements.*" icon="fa-solid fa-trophy" label="Prestasi Siswa" />
-                            <x-nav-item route="admin.settings.sekolah" routeGroup="admin.settings.*" icon="fa-solid fa-microphone-lines" label="Profil Sambutan" />
+                            <x-nav-item route="admin.settings.sekolah" routeGroup="admin.settings.sekolah" icon="fa-solid fa-microphone-lines" label="Profil Sambutan" />
+                            <x-nav-item route="admin.settings.struktur" routeGroup="admin.settings.struktur" icon="fa-solid fa-sitemap" label="Struktur Organisasi" />
 
                         @endif
                     </div>

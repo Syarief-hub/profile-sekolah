@@ -65,6 +65,15 @@
                     <p class="text-slate-500 text-sm">Edit profil dan teks sambutan Kepala Sekolah.</p>
                 </a>
 
+                <!-- Card 4 -->
+                <a href="{{ route('admin.employees.index') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-slate-100 transition duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-110 transition duration-500"></div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-solid fa-users-tie"></i>
+                    </div>
+                    <h5 class="font-bold text-slate-800 text-lg mb-1 group-hover:text-blue-600 transition">Guru & Staf</h5>
+                    <p class="text-slate-500 text-sm">Kelola data tenaga pendidik dan kependidikan.</p>
+                </a>
 
                 @endif
                 
