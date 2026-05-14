@@ -34,7 +34,7 @@
                         </p>
                     </div>
 
-                    <form action="{{ route('admin.settings.struktur.update') }}" method="POST">
+                    <form action="{{ route('admin.settings.struktur.update') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         
@@ -43,14 +43,30 @@
                             <div>
                                 <h3 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Level Pimpinan & Staf</h3>
                                 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_komite_name" class="block text-gray-700 text-sm font-bold mb-2">Nama Ketua Komite:</label>
-                                    <input type="text" name="structure_komite_name" id="structure_komite_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_komite_name', $settings['structure_komite_name'] ?? 'H. Nama Komite, S.Pd., M.Si') }}" required>
+                                    <input type="text" name="structure_komite_name" id="structure_komite_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_komite_name', $settings['structure_komite_name'] ?? 'H. Nama Komite, S.Pd., M.Si') }}" required>
+                                    
+                                    <label for="structure_komite_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Komite (Opsional):</label>
+                                    @if(isset($settings['structure_komite_photo']) && $settings['structure_komite_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_komite_photo']) }}" alt="Komite" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_komite_photo" id="structure_komite_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_tu_name" class="block text-gray-700 text-sm font-bold mb-2">Nama Kepala Tata Usaha (TU):</label>
-                                    <input type="text" name="structure_tu_name" id="structure_tu_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_tu_name', $settings['structure_tu_name'] ?? 'Nama Kepala TU, S.E') }}" required>
+                                    <input type="text" name="structure_tu_name" id="structure_tu_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_tu_name', $settings['structure_tu_name'] ?? 'Nama Kepala TU, S.E') }}" required>
+                                    
+                                    <label for="structure_tu_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Kepala TU (Opsional):</label>
+                                    @if(isset($settings['structure_tu_photo']) && $settings['structure_tu_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_tu_photo']) }}" alt="Kepala TU" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_tu_photo" id="structure_tu_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
                             </div>
 
@@ -58,24 +74,56 @@
                             <div>
                                 <h3 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Jajaran Wakil Kepala Sekolah</h3>
 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_waka_kurikulum_name" class="block text-gray-700 text-sm font-bold mb-2">Waka Kurikulum:</label>
-                                    <input type="text" name="structure_waka_kurikulum_name" id="structure_waka_kurikulum_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_waka_kurikulum_name', $settings['structure_waka_kurikulum_name'] ?? 'Nama Waka Kurikulum, S.Pd') }}" required>
+                                    <input type="text" name="structure_waka_kurikulum_name" id="structure_waka_kurikulum_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_waka_kurikulum_name', $settings['structure_waka_kurikulum_name'] ?? 'Nama Waka Kurikulum, S.Pd') }}" required>
+                                    
+                                    <label for="structure_waka_kurikulum_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Waka Kurikulum (Opsional):</label>
+                                    @if(isset($settings['structure_waka_kurikulum_photo']) && $settings['structure_waka_kurikulum_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_waka_kurikulum_photo']) }}" alt="Waka Kurikulum" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_waka_kurikulum_photo" id="structure_waka_kurikulum_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_waka_kesiswaan_name" class="block text-gray-700 text-sm font-bold mb-2">Waka Kesiswaan:</label>
-                                    <input type="text" name="structure_waka_kesiswaan_name" id="structure_waka_kesiswaan_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_waka_kesiswaan_name', $settings['structure_waka_kesiswaan_name'] ?? 'Nama Waka Kesiswaan, S.Pd') }}" required>
+                                    <input type="text" name="structure_waka_kesiswaan_name" id="structure_waka_kesiswaan_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_waka_kesiswaan_name', $settings['structure_waka_kesiswaan_name'] ?? 'Nama Waka Kesiswaan, S.Pd') }}" required>
+                                    
+                                    <label for="structure_waka_kesiswaan_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Waka Kesiswaan (Opsional):</label>
+                                    @if(isset($settings['structure_waka_kesiswaan_photo']) && $settings['structure_waka_kesiswaan_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_waka_kesiswaan_photo']) }}" alt="Waka Kesiswaan" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_waka_kesiswaan_photo" id="structure_waka_kesiswaan_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_waka_sarpras_name" class="block text-gray-700 text-sm font-bold mb-2">Waka Sarana & Prasarana:</label>
-                                    <input type="text" name="structure_waka_sarpras_name" id="structure_waka_sarpras_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_waka_sarpras_name', $settings['structure_waka_sarpras_name'] ?? 'Nama Waka Sarpras, S.Pd') }}" required>
+                                    <input type="text" name="structure_waka_sarpras_name" id="structure_waka_sarpras_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_waka_sarpras_name', $settings['structure_waka_sarpras_name'] ?? 'Nama Waka Sarpras, S.Pd') }}" required>
+                                    
+                                    <label for="structure_waka_sarpras_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Waka Sarpras (Opsional):</label>
+                                    @if(isset($settings['structure_waka_sarpras_photo']) && $settings['structure_waka_sarpras_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_waka_sarpras_photo']) }}" alt="Waka Sarpras" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_waka_sarpras_photo" id="structure_waka_sarpras_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
 
-                                <div class="mb-4">
+                                <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     <label for="structure_waka_humas_name" class="block text-gray-700 text-sm font-bold mb-2">Waka Humas:</label>
-                                    <input type="text" name="structure_waka_humas_name" id="structure_waka_humas_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('structure_waka_humas_name', $settings['structure_waka_humas_name'] ?? 'Nama Waka Humas, S.Pd') }}" required>
+                                    <input type="text" name="structure_waka_humas_name" id="structure_waka_humas_name" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition mb-3" value="{{ old('structure_waka_humas_name', $settings['structure_waka_humas_name'] ?? 'Nama Waka Humas, S.Pd') }}" required>
+                                    
+                                    <label for="structure_waka_humas_photo" class="block text-gray-700 text-sm font-bold mb-2">Foto Waka Humas (Opsional):</label>
+                                    @if(isset($settings['structure_waka_humas_photo']) && $settings['structure_waka_humas_photo'])
+                                        <div class="mb-2">
+                                            <img src="{{ asset('storage/' . $settings['structure_waka_humas_photo']) }}" alt="Waka Humas" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
+                                        </div>
+                                    @endif
+                                    <input type="file" name="structure_waka_humas_photo" id="structure_waka_humas_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
                                 </div>
                             </div>
                         </div>

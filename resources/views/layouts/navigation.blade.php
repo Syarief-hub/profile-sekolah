@@ -51,16 +51,31 @@
                         
                         @if(Auth::user()->role === 'Admin')
                             <div class="pt-6 pb-2">
-                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Manajemen Konten</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Publikasi & Data Utama</span>
                             </div>
-                            
                             <x-nav-item route="admin.articles.index" routeGroup="admin.articles.*" icon="fa-solid fa-newspaper" label="Berita / Artikel" />
                             <x-nav-item route="admin.galleries.index" routeGroup="admin.galleries.*" icon="fa-solid fa-images" label="Galeri Media" />
-                            <x-nav-item route="admin.employees.index" routeGroup="admin.employees.*" icon="fa-solid fa-users-viewfinder" label="Guru & Staf" />
-                            <x-nav-item route="admin.extracurriculars.index" routeGroup="admin.extracurriculars.*" icon="fa-solid fa-volleyball" label="Ekstrakurikuler" />
                             <x-nav-item route="admin.achievements.index" routeGroup="admin.achievements.*" icon="fa-solid fa-trophy" label="Prestasi Siswa" />
+                            <x-nav-item route="admin.extracurriculars.index" routeGroup="admin.extracurriculars.*" icon="fa-solid fa-volleyball" label="Ekstrakurikuler" />
+                            <x-nav-item route="admin.employees.index" routeGroup="admin.employees.*" icon="fa-solid fa-user-tie" label="Guru & Staf" />
+                            
+                            <div class="pt-6 pb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Halaman Profil Sekolah</span>
+                            </div>
                             <x-nav-item route="admin.settings.sekolah" routeGroup="admin.settings.sekolah" icon="fa-solid fa-microphone-lines" label="Profil Sambutan" />
+                            <x-nav-item route="admin.settings.sejarah" routeGroup="admin.settings.sejarah" icon="fa-solid fa-clock-rotate-left" label="Sejarah Sekolah" />
                             <x-nav-item route="admin.settings.struktur" routeGroup="admin.settings.struktur" icon="fa-solid fa-sitemap" label="Struktur Organisasi" />
+                            
+                            <div class="pt-6 pb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Akademik & Kesiswaan</span>
+                            </div>
+                            <x-nav-item route="admin.settings.kurikulum" routeGroup="admin.settings.kurikulum" icon="fa-solid fa-book-open" label="Informasi Kurikulum" />
+                            <x-nav-item route="admin.settings.osismpk" routeGroup="admin.settings.osismpk" icon="fa-solid fa-users-viewfinder" label="Profil OSIS & MPK" />
+
+                            <div class="pt-6 pb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Sistem & Pengaturan</span>
+                            </div>
+                            <x-nav-item route="admin.users.index" routeGroup="admin.users.*" icon="fa-solid fa-users-gear" label="Manajemen Akun" />
 
                         @endif
                     </div>

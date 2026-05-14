@@ -73,7 +73,7 @@
                             <div>
                                 <h3 class="font-black text-2xl md:text-3xl text-slate-800 mb-3 tracking-tight">Menerapkan <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Kurikulum Merdeka</span></h3>
                                 <p class="text-slate-600 leading-relaxed text-sm lg:text-base">
-                                    SMA Negeri 1 Suwawa telah menerapkan <strong>Kurikulum Merdeka</strong> penuh. Kami memberikan kebebasan kepada peserta didik untuk memilih mata pelajaran mendalam sesuai dengan minat, bakat, dan aspirasi akademis mereka, sembari berfokus pada asimilasi materi esensial dan pengembangan karakter <b>Profil Pelajar Pancasila</b>.
+                                    {!! $global_settings['kurikulum_intro'] ?? 'SMA Negeri 1 Suwawa telah menerapkan <strong>Kurikulum Merdeka</strong> penuh. Kami memberikan kebebasan kepada peserta didik untuk memilih mata pelajaran mendalam sesuai dengan minat, bakat, dan aspirasi akademis mereka, sembari berfokus pada asimilasi materi esensial dan pengembangan karakter <b>Profil Pelajar Pancasila</b>.' !!}
                                 </p>
                                 <div class="mt-6 flex flex-wrap gap-3 text-xs md:text-sm font-bold">
                                     <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-emerald-500"></i> Fokus Esensial</span>
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="p-8">
                                     <p class="text-slate-500 text-sm mb-6 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                        Peserta didik mengambil <b>seluruh mata pelajaran wajib</b>. Di jenjang ini, peserta didik diarahkan untuk mengenali minat dan bakatnya sebelum menetapkan pilihan vokasional di Fase F.
+                                        {!! $global_settings['kurikulum_fase_e_desc'] ?? 'Peserta didik mengambil <b>seluruh mata pelajaran wajib</b>. Di jenjang ini, peserta didik diarahkan untuk mengenali minat dan bakatnya sebelum menetapkan pilihan vokasional di Fase F.' !!}
                                     </p>
                                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Muatan Pelajaran</h5>
                                     <ul class="space-y-3 text-sm font-semibold text-slate-700">
@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="p-8">
                                     <p class="text-slate-500 text-sm mb-6 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                        Peserta didik <b>memilih mata pelajaran penjurusan</b> sesuai gaya belajar, minat, dan studi lanjut. Kami menghilangkan sekat kaku pengotakan (tidak lagi hanya IPA / IPS).
+                                        {!! $global_settings['kurikulum_fase_f_desc'] ?? 'Peserta didik <b>memilih mata pelajaran penjurusan</b> sesuai gaya belajar, minat, dan studi lanjut. Kami menghilangkan sekat kaku pengotakan (tidak lagi hanya IPA / IPS).' !!}
                                     </p>
                                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Kelompok Pelajaran</h5>
                                     <ul class="space-y-3 text-sm font-semibold text-slate-700">
@@ -159,7 +159,7 @@
                                     <i class="fa-solid fa-hands-holding-child"></i> Project-based Learning
                                 </div>
                                 <h4 class="font-black text-2xl md:text-3xl text-slate-800 mb-4 tracking-tight">Projek Penguatan <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Profil Pelajar Pancasila (P5)</span></h4>
-                                <p class="text-slate-500 text-sm md:text-base leading-relaxed mb-6">Sebagai inti dari Kurikulum Merdeka, sekolah kami menyelenggarakan kegiatan kokurikuler khusus P5 yang memakan alokasi waktu hingga 30% per semester. Siswa diajarkan menuntaskan persoalan nyata melalui projek lintas disiplin ilmu.</p>
+                                <p class="text-slate-500 text-sm md:text-base leading-relaxed mb-6">{!! $global_settings['kurikulum_p5_desc'] ?? 'Sebagai inti dari Kurikulum Merdeka, sekolah kami menyelenggarakan kegiatan kokurikuler khusus P5 yang memakan alokasi waktu hingga 30% per semester. Siswa diajarkan menuntaskan persoalan nyata melalui projek lintas disiplin ilmu.' !!}</p>
                                 
                                 <!-- Tags P5 Tema -->
                                 <div class="flex flex-wrap gap-2 text-[11px] md:text-xs font-bold text-slate-600">

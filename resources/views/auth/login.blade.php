@@ -5,18 +5,18 @@
         <form method="POST" action="{{ route('login') }}" class="space-y-6">
             @csrf
 
-            <!-- Email Address -->
+            <!-- Username -->
             <div>
-                <label for="email" class="block text-sm font-bold text-slate-700 mb-2">{{ __('Email Address') }}</label>
+                <label for="username" class="block text-sm font-bold text-slate-700 mb-2">{{ __('Username') }}</label>
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <i class="fa-regular fa-envelope text-slate-400"></i>
+                        <i class="fa-regular fa-user text-slate-400"></i>
                     </div>
-                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username" 
+                    <input id="username" type="text" name="username" value="{{ old('username') }}" required autofocus autocomplete="username" 
                         class="block w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition duration-300 shadow-sm"
-                        placeholder="admin@example.com">
+                        placeholder="admin123">
                 </div>
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                <x-input-error :messages="$errors->get('username')" class="mt-2" />
             </div>
 
             <!-- Password -->

@@ -23,7 +23,7 @@
                 Perpustakaan Digital
             </h1>
             <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                Panduan akses dan penggunaan fasilitas perpustakaan literatur digital SMA Negeri 1 Suwawa.
+                Informasi layanan, prosedur peminjaman, dan akses katalog buku online (OPAC) terintegrasi sistem SIPERPUS.
             </p>
         </div>
         
@@ -48,41 +48,41 @@
                     <!-- Kiri: Panduan & Informasi -->
                     <div class="w-full md:w-2/3">
                         <div class="mb-10">
-                            <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight leading-tight mb-4">Cara Menggunakan Perpustakaan Digital</h2>
-                            <p class="text-slate-600 text-lg leading-relaxed">Selain koleksi buku fisik di sekolah, siswa juga dapat mengakses literasi di mana saja melalui layanan Perpustakaan Elektronik (Digital). Berikut panduan akses bagi siswa dan guru.</p>
+                            <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight leading-tight mb-4">Layanan Sistem Informasi Perpustakaan (SIPERPUS)</h2>
+                            <p class="text-slate-600 text-lg leading-relaxed">Perpustakaan SMA Negeri 1 Suwawa kini telah didukung oleh sistem digital SIPERPUS terpadu yang memudahkan siswa untuk mencari dan meminjam buku fisik maupun digital.</p>
                         </div>
                         
-                        <div class="space-y-6">
-                            <!-- Step 1 -->
+                        <div class="space-y-8">
+                            <!-- Feature 1 -->
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 flex-shrink-0 bg-primary/10 text-primary rounded-xl flex items-center justify-center font-black text-xl border border-primary/20">
-                                    1
+                                    <i class="fa-solid fa-magnifying-glass"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Akses Tautan / Portal</h3>
-                                    <p class="text-slate-600 leading-relaxed text-sm">Klik tombol <span class="font-semibold">"Kunjungi Perpustakaan"</span> di sebelah kanan, atau masukkan url kiblatbio.link/sman1suwawa di browser komputer atau HP Anda.</p>
+                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Katalog Buku Publik (OPAC)</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">Anda dapat melihat daftar seluruh buku yang tersedia di perpustakaan melalui halaman publik SIPERPUS dari mana saja tanpa perlu login. Anda dapat mengecek status ketersediaan buku secara *real-time*.</p>
                                 </div>
                             </div>
                             
-                            <!-- Step 2 -->
+                            <!-- Feature 2 -->
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 flex-shrink-0 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center font-black text-xl border border-amber-100">
-                                    2
+                                    <i class="fa-solid fa-arrows-rotate"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Login Akun Siswa</h3>
-                                    <p class="text-slate-600 leading-relaxed text-sm">Gunakan kombinasi NISN (Nomor Induk Siswa Nasional) sebagai username dan sandi yang telah diberikan oleh admin perpustakaan saat pendaftaran buku induk. Untuk tamu/guru bisa menggunakan NIP.</p>
+                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Alur Peminjaman Buku</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">Cari buku yang Anda inginkan di katalog SIPERPUS. Kunjungi perpustakaan dan bawa buku tersebut ke meja admin. Admin akan melakukan *scan barcode* pada eksemplar buku dan akun anggota Anda untuk memproses peminjaman secara cepat.</p>
                                 </div>
                             </div>
                             
-                            <!-- Step 3 -->
+                            <!-- Feature 3 -->
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 flex-shrink-0 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center font-black text-xl border border-blue-100">
-                                    3
+                                <div class="w-12 h-12 flex-shrink-0 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-xl border border-red-100">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Cari dan Pinjam e-Book</h3>
-                                    <p class="text-slate-600 leading-relaxed text-sm">Cari buku pelajaran, modul, maupun buku fiksi ilmiah yang Anda inginkan lewat kolom pencarian aplikasi. Anda bisa mengunduhnya atau membacanya langsung (e-reader) jika meminjam melalui sistem.</p>
+                                    <h3 class="font-bold text-xl text-slate-800 mb-2">Batas Peminjaman & Denda</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">Sistem SIPERPUS secara otomatis mengatur batas maksimal jumlah buku yang dapat dipinjam secara bersamaan beserta durasi peminjamannya. Denda harian akan diakumulasikan secara otomatis oleh sistem untuk setiap keterlambatan pengembalian buku.</p>
                                 </div>
                             </div>
                         </div>
@@ -94,14 +94,14 @@
                             <i class="fa-solid fa-book-open-reader"></i>
                         </div>
                         <h3 class="font-bold text-xl text-slate-800 mb-2">Akses Layanan</h3>
-                        <p class="text-sm text-slate-500 mb-8">Buka website resmi perpustakaan digital kami di jendela baru.</p>
+                        <p class="text-sm text-slate-500 mb-8">Buka portal SIPERPUS untuk mengecek ketersediaan buku incaran Anda.</p>
                         
-                        <a href="https://kiblatbio.link/sman1suwawa" target="_blank" rel="noopener noreferrer" class="block w-full py-4 px-6 bg-primary hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300">
-                            Kunjungi Perpustakaan <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
+                        <a href="https://siperpus.smansasuwawa.site/" target="_blank" rel="noopener noreferrer" class="block w-full py-4 px-6 bg-primary hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300">
+                            Kunjungi SIPERPUS <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                         </a>
                         
                         <div class="mt-6 pt-6 border-t border-slate-200">
-                            <p class="text-xs text-slate-400">Pertanyaan atau kendala sandi? Hubungi admin Pusdokinfo SMAN 1 Suwawa.</p>
+                            <p class="text-xs text-slate-400">Punya kendala akun anggota? Hubungi admin Perpustakaan SMAN 1 Suwawa.</p>
                         </div>
                     </div>
                     

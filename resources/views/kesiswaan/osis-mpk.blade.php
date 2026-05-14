@@ -67,7 +67,7 @@
                             </div>
                             <h3 class="text-2xl font-black text-slate-800 mb-3 tracking-tight">OSIS SMAN 1 Suwawa</h3>
                             <div class="h-1 w-12 bg-indigo-500 rounded-full mb-4 mx-auto"></div>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Organisasi Siswa Intra Sekolah (OSIS) adalah wadah pembinaan generasi muda di lingkungan sekolah untuk mengembangkan potensi, karakter, kepemimpinan, dan kemandirian siswa secara kolektif.</p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">{{ $global_settings['osis_description'] ?? 'Organisasi Siswa Intra Sekolah (OSIS) adalah wadah pembinaan generasi muda di lingkungan sekolah untuk mengembangkan potensi, karakter, kepemimpinan, dan kemandirian siswa secara kolektif.' }}</p>
                             <span class="mt-auto px-4 py-1.5 bg-white text-indigo-700 text-xs font-bold rounded-lg border border-indigo-100 shadow-sm uppercase tracking-wider">Eksekutif Siswa</span>
                         </div>
                         
@@ -79,7 +79,7 @@
                             </div>
                             <h3 class="text-2xl font-black text-slate-800 mb-3 tracking-tight">MPK SMAN 1 Suwawa</h3>
                             <div class="h-1 w-12 bg-purple-500 rounded-full mb-4 mx-auto"></div>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Majelis Perwakilan Kelas (MPK) merupakan badan legislatif tingkat siswa yang bertugas mengawasi, mengevaluasi, dan menampung aspirasi siswa untuk kemajuan tata kelola berbagai program OSIS.</p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">{{ $global_settings['mpk_description'] ?? 'Majelis Perwakilan Kelas (MPK) merupakan badan legislatif tingkat siswa yang bertugas mengawasi, mengevaluasi, dan menampung aspirasi siswa untuk kemajuan tata kelola berbagai program OSIS.' }}</p>
                             <span class="mt-auto px-4 py-1.5 bg-white text-purple-700 text-xs font-bold rounded-lg border border-purple-100 shadow-sm uppercase tracking-wider">Legislatif Siswa</span>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 <i class="fa-solid fa-quote-left py-2 text-8xl absolute top-4 left-6 opacity-10"></i>
                                 <div class="relative z-10">
                                     <div class="inline-block px-3 py-1 mb-4 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest border border-emerald-500/30">Visi Organisasi</div>
-                                    <h3 class="font-bold text-2xl lg:text-3xl leading-snug mb-6">"Menjadikan siswa-siswi SMAN 1 Suwawa berkarakter, inovatif, dan berprestasi berlandaskan IMTAK dan IPTEK."</h3>
+                                    <h3 class="font-bold text-2xl lg:text-3xl leading-snug mb-6">"{{ $global_settings['osis_vision'] ?? 'Menjadikan siswa-siswi SMAN 1 Suwawa berkarakter, inovatif, dan berprestasi berlandaskan IMTAK dan IPTEK.' }}"</h3>
                                     <div class="flex items-center gap-4">
                                         <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center border border-slate-600">
                                             <i class="fa-solid fa-bullseye text-emerald-400"></i>
@@ -108,29 +108,9 @@
                                     <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-list-check"></i></div>
                                     Misi Utama OSIS
                                </h4>
-                                <ul class="space-y-4">
-                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
-                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">1</div>
-                                        <div>
-                                            <h5 class="font-bold text-slate-800 mb-1">Meningkatkan Kedisiplinan</h5>
-                                            <p class="text-slate-600 text-sm">Menanamkan sikap disiplin dan patuh terhadap tata tertib tertulis maupun tidak tertulis di sekolah.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
-                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">2</div>
-                                        <div>
-                                            <h5 class="font-bold text-slate-800 mb-1">Pengembangan Minat Bakat</h5>
-                                            <p class="text-slate-600 text-sm">Menyelenggarakan kegiatan ekstrakurikuler serta ajang lomba intern guna memfasilitasi ragam minat dan talenta siswa.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 transition duration-300 hover:bg-white hover:shadow-sm">
-                                        <div class="w-8 h-8 flex-shrink-0 bg-primary/10 text-primary font-bold rounded-full flex items-center justify-center mt-0.5 shadow-sm border border-primary/20">3</div>
-                                        <div>
-                                            <h5 class="font-bold text-slate-800 mb-1">Kepedulian Sosial & Lingkungan</h5>
-                                            <p class="text-slate-600 text-sm">Menumbuhkan kepekaan sosial dan solidaritas antar warga sekolah maupun masyarakat secara umum.</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div class="prose prose-slate prose-li:marker:text-primary max-w-none text-slate-600">
+                                    {!! $global_settings['osis_mission'] ?? '<ul><li>Meningkatkan Kedisiplinan</li><li>Pengembangan Minat Bakat</li><li>Kepedulian Sosial & Lingkungan</li></ul>' !!}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -150,8 +130,8 @@
                                 <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-blue-100 group-hover:rotate-6 transition duration-300">
                                     <i class="fa-solid fa-trophy"></i>
                                 </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Class Meeting & Porseni</h4>
-                                <p class="text-slate-500 text-sm line-clamp-3">Ajang kompetisi olahraga dan seni antar kelas rutin yang selalu digemari dan dilaksanakan pasca ujian semester demi memperkokoh ikatan persaudaraan.</p>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">{{ $global_settings['osis_program_1_title'] ?? 'Class Meeting & Porseni' }}</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">{{ $global_settings['osis_program_1_desc'] ?? 'Ajang kompetisi olahraga dan seni antar kelas rutin yang selalu digemari dan dilaksanakan pasca ujian semester demi memperkokoh ikatan persaudaraan.' }}</p>
                             </div>
                             
                             <!-- Prog 2 -->
@@ -160,8 +140,8 @@
                                 <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-emerald-100 group-hover:rotate-6 transition duration-300">
                                     <i class="fa-solid fa-leaf"></i>
                                 </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Gerakan Lingkungan Bersih</h4>
-                                <p class="text-slate-500 text-sm line-clamp-3">Program kolaborasi pemeliharaan lingkungan sekolah dengan konsep go-green, mendaur ulang sampah, serta inisiatif memperindah area kelas.</p>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">{{ $global_settings['osis_program_2_title'] ?? 'Gerakan Lingkungan Bersih' }}</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">{{ $global_settings['osis_program_2_desc'] ?? 'Program kolaborasi pemeliharaan lingkungan sekolah dengan konsep go-green, mendaur ulang sampah, serta inisiatif memperindah area kelas.' }}</p>
                             </div>
 
                             <!-- Prog 3 -->
@@ -170,8 +150,8 @@
                                 <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm border border-amber-100 group-hover:rotate-6 transition duration-300">
                                     <i class="fa-solid fa-calendar-star"></i>
                                 </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Perayaan Hari Besar</h4>
-                                <p class="text-slate-500 text-sm line-clamp-3">Penyelenggaraan acara religius & kebangsaan yang atraktif seperti perayaan kemerdekaan 17 Agustus, Sumpah Pemuda, dan kegiatan hari keagamaan.</p>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">{{ $global_settings['osis_program_3_title'] ?? 'Perayaan Hari Besar' }}</h4>
+                                <p class="text-slate-500 text-sm line-clamp-3">{{ $global_settings['osis_program_3_desc'] ?? 'Penyelenggaraan acara religius & kebangsaan yang atraktif seperti perayaan kemerdekaan 17 Agustus, Sumpah Pemuda, dan kegiatan hari keagamaan.' }}</p>
                             </div>
                         </div>
                     </div>

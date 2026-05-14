@@ -66,7 +66,14 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::put('/settings/sekolah', [SettingController::class, 'updateSekolah'])->name('settings.sekolah.update');
     Route::get('/settings/struktur', [SettingController::class, 'editStruktur'])->name('settings.struktur');
     Route::put('/settings/struktur', [SettingController::class, 'updateStruktur'])->name('settings.struktur.update');
+    Route::get('/settings/sejarah', [SettingController::class, 'editSejarah'])->name('settings.sejarah');
+    Route::put('/settings/sejarah', [SettingController::class, 'updateSejarah'])->name('settings.sejarah.update');
+    Route::get('/settings/osismpk', [SettingController::class, 'editOsisMpk'])->name('settings.osismpk');
+    Route::put('/settings/osismpk', [SettingController::class, 'updateOsisMpk'])->name('settings.osismpk.update');
+    Route::get('/settings/kurikulum', [SettingController::class, 'editKurikulum'])->name('settings.kurikulum');
+    Route::put('/settings/kurikulum', [SettingController::class, 'updateKurikulum'])->name('settings.kurikulum.update');
     Route::resource('contacts', \App\Http\Controllers\Admin\ContactController::class)->only(['index', 'show', 'destroy']);
+    Route::resource('users', \App\Http\Controllers\Admin\UserController::class)->except(['show']);
 });
 
 require __DIR__.'/auth.php';

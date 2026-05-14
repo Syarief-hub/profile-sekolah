@@ -96,12 +96,126 @@ class SettingController extends Controller
             'structure_waka_kesiswaan_name' => 'required|string|max:255',
             'structure_waka_sarpras_name' => 'required|string|max:255',
             'structure_waka_humas_name' => 'required|string|max:255',
+            'structure_komite_photo' => 'nullable|image|max:5120',
+            'structure_tu_photo' => 'nullable|image|max:5120',
+            'structure_waka_kurikulum_photo' => 'nullable|image|max:5120',
+            'structure_waka_kesiswaan_photo' => 'nullable|image|max:5120',
+            'structure_waka_sarpras_photo' => 'nullable|image|max:5120',
+            'structure_waka_humas_photo' => 'nullable|image|max:5120',
+        ]);
+
+        $textFields = [
+            'structure_komite_name', 'structure_tu_name',
+            'structure_waka_kurikulum_name', 'structure_waka_kesiswaan_name',
+            'structure_waka_sarpras_name', 'structure_waka_humas_name'
+        ];
+
+        foreach ($textFields as $key) {
+            if (isset($validated[$key])) {
+                Setting::updateOrCreate(['key' => $key], ['value' => $validated[$key], 'type' => 'text']);
+            }
+        }
+
+        $photoFields = [
+            'structure_komite_photo', 'structure_tu_photo',
+            'structure_waka_kurikulum_photo', 'structure_waka_kesiswaan_photo',
+            'structure_waka_sarpras_photo', 'structure_waka_humas_photo'
+        ];
+
+        foreach ($photoFields as $key) {
+            if ($request->hasFile($key)) {
+                $setting = Setting::where('key', $key)->first();
+                if ($setting && $setting->value) {
+                    Storage::disk('public')->delete($setting->value);
+                }
+                $path = $request->file($key)->store('settings', 'public');
+                Setting::updateOrCreate(['key' => $key], ['value' => $path, 'type' => 'image']);
+            }
+        }
+
+        return redirect()->route('admin.settings.struktur')->with('success', 'Struktur Organisasi beserta foto berhasil diperbarui.');
+    }
+
+    public function editSejarah()
+    {
+        $settingsRaw = Setting::all();
+        $settings = [];
+        foreach ($settingsRaw as $setting) {
+            $settings[$setting->key] = $setting->value;
+        }
+
+        return view('admin.settings.sejarah', compact('settings'));
+    }
+
+    public function updateSejarah(Request $request)
+    {
+        $validated = $request->validate([
+            'sejarah_content' => 'required|string',
+        ]);
+
+        Setting::updateOrCreate(['key' => 'sejarah_content'], ['value' => $validated['sejarah_content'], 'type' => 'longtext']);
+
+        return redirect()->route('admin.settings.sejarah')->with('success', 'Informasi Sejarah berhasil diperbarui.');
+    }
+
+    public function editOsisMpk()
+    {
+        $settingsRaw = Setting::all();
+        $settings = [];
+        foreach ($settingsRaw as $setting) {
+            $settings[$setting->key] = $setting->value;
+        }
+
+        return view('admin.settings.osismpk', compact('settings'));
+    }
+
+    public function updateOsisMpk(Request $request)
+    {
+        $validated = $request->validate([
+            'osis_description' => 'required|string',
+            'mpk_description' => 'required|string',
+            'osis_vision' => 'required|string',
+            'osis_mission' => 'required|string',
+            'osis_program_1_title' => 'required|string|max:255',
+            'osis_program_1_desc' => 'required|string',
+            'osis_program_2_title' => 'required|string|max:255',
+            'osis_program_2_desc' => 'required|string',
+            'osis_program_3_title' => 'required|string|max:255',
+            'osis_program_3_desc' => 'required|string',
         ]);
 
         foreach ($validated as $key => $value) {
-            Setting::updateOrCreate(['key' => $key], ['value' => $value, 'type' => 'text']);
+            $type = ($key === 'osis_mission') ? 'longtext' : 'text';
+            Setting::updateOrCreate(['key' => $key], ['value' => $value, 'type' => $type]);
         }
 
-        return redirect()->route('admin.settings.struktur')->with('success', 'Struktur Organisasi berhasil diperbarui.');
+        return redirect()->route('admin.settings.osismpk')->with('success', 'Profil OSIS & MPK berhasil diperbarui.');
+    }
+
+    public function editKurikulum()
+    {
+        $settingsRaw = Setting::all();
+        $settings = [];
+        foreach ($settingsRaw as $setting) {
+            $settings[$setting->key] = $setting->value;
+        }
+
+        return view('admin.settings.kurikulum', compact('settings'));
+    }
+
+    public function updateKurikulum(Request $request)
+    {
+        $validated = $request->validate([
+            'kurikulum_intro' => 'required|string',
+            'kurikulum_fase_e_desc' => 'required|string',
+            'kurikulum_fase_f_desc' => 'required|string',
+            'kurikulum_p5_desc' => 'required|string',
+        ]);
+
+        foreach ($validated as $key => $value) {
+            Setting::updateOrCreate(['key' => $key], ['value' => $value, 'type' => 'longtext']);
+        }
+
+        return redirect()->route('admin.settings.kurikulum')->with('success', 'Informasi Kurikulum berhasil diperbarui.');
     }
 }

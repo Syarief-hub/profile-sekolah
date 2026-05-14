@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- 1. Hero Section (EducateX Style) -->
-    <section class="relative bg-brand-dark pt-16 pb-32 lg:pt-24 lg:pb-40 overflow-hidden">
+    <section class="relative bg-white pt-16 pb-32 lg:pt-24 lg:pb-40 overflow-hidden">
         <!-- Abstract Waves / Shapes -->
         <div class="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none opacity-20 z-0">
             <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="absolute -right-1/4 -top-1/4 w-[150%] h-[150%] animate-spin-slow" style="animation-duration: 60s;">
@@ -17,11 +17,11 @@
                 
                 <!-- Left Content -->
                 <div class="w-full lg:w-1/2">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-primary-100 text-xs font-semibold tracking-wider mb-6 border border-white/20 uppercase">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-primary text-xs font-bold tracking-wider mb-6 border border-emerald-100 uppercase">
                         <i class="fa-solid fa-star text-secondary"></i> {{ $global_settings['hero_badge'] ?? 'Tahun Ajaran 2026/2027' }}
                     </div>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-heading font-black text-white leading-[1.1] mb-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-heading font-black text-slate-900 leading-[1.1] mb-6">
                         Tumbuhkan <br>
                         Gairah Belajar bersama <span class="text-primary relative inline-block">SMAN 1 Suwawa
                         <!-- Underline swoop -->
@@ -29,7 +29,7 @@
                         </span>
                     </h1>
                     
-                    <p class="text-slate-300 text-lg sm:text-xl mb-10 leading-relaxed font-light max-w-xl">
+                    <p class="text-slate-600 text-lg sm:text-xl mb-10 leading-relaxed font-medium max-w-xl">
                         Selamat datang di website resmi SMA Negeri 1 Suwawa. Temukan informasi terkini, profil sekolah, dan layanan kegiatan akademik kami secara online.
                     </p>
                     
@@ -38,7 +38,7 @@
                         <a href="#profil" class="bg-primary hover:bg-emerald-600 text-white px-8 py-4 rounded font-bold shadow-[0_4px_15px_rgba(16,185,129,0.4)] transition flex items-center gap-2">
                             Mulai Sekarang <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="{{ route('articles.index') }}" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded font-bold backdrop-blur-sm border border-white/10 transition flex items-center gap-2">
+                        <a href="{{ route('articles.index') }}" class="bg-emerald-50 hover:bg-emerald-100 text-primary border border-emerald-100 px-8 py-4 rounded font-bold transition flex items-center gap-2">
                             Jelajahi Berita
                         </a>
                     </div>
@@ -50,11 +50,12 @@
                         <!-- Orange blob background -->
                         <div class="absolute inset-0 bg-secondary rounded-[30%_70%_70%_30%/30%_30%_70%_70%] transform rotate-6 scale-105"></div>
                         <!-- Main Image -->
-                        <div class="absolute inset-0 overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-[8px] border-brand-dark bg-emerald-50">
+                        <div class="absolute inset-0 overflow-hidden rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-[8px] border-white shadow-xl bg-emerald-50">
                             @if(isset($global_settings['hero_image']) && $global_settings['hero_image'])
                                 <img src="{{ Storage::url($global_settings['hero_image']) }}" alt="Foto Beranda Utama" class="w-full h-full object-cover text-transparent">
                             @else
-                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Siswa+Belajar&color=10b981&background=d1fae5&size=800';" alt="Siswa Belajar" class="w-full h-full object-cover text-transparent">
+                                <!-- Default to a bright school/building image -->
+                                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1000&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Sekolah&color=10b981&background=d1fae5&size=800';" alt="Sekolah SMAN 1 Suwawa" class="w-full h-full object-cover text-transparent">
                             @endif
                         </div>
 
@@ -195,7 +196,7 @@
                         <span class="text-slate-800 font-bold text-sm leading-snug">Berkomitmen pada<br>Pendidikan Online & Offline Terbaik</span>
                     </div>
 
-                    <a href="{{ route('profil.sejarah') }}" class="inline-flex items-center gap-2 bg-brand-dark hover:bg-slate-800 text-white px-8 py-4 rounded font-bold transition shadow-lg">
+                    <a href="{{ route('profil.sejarah') }}" class="inline-flex items-center gap-2 bg-emerald-100 hover:bg-emerald-200 text-primary px-8 py-4 rounded font-bold transition shadow-sm">
                         Pelajari Sejarah Kami <i class="fa-solid fa-arrow-right-long ml-1"></i>
                     </a>
                 </div>
