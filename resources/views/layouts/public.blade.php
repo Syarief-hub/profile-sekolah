@@ -8,6 +8,9 @@
     <title>@yield('title', 'Profil Sekolah | SMA Negeri 1 Suwawa')</title>
     <meta name="description" content="@yield('meta_description', 'Website Resmi SMA Negeri 1 Suwawa. Temukan informasi profil, akademik, kesiswaan, prestasi, dan berita terkini tentang sekolah kami.')">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+
     <!-- Google Fonts: Inter & Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
