@@ -4,7 +4,7 @@
             <h2 class="font-bold text-2xl text-slate-800 leading-tight flex items-center gap-2">
                 <i class="fa-solid fa-newspaper text-primary/70"></i> {{ __('Kelola Berita') }}
             </h2>
-            <a href="{{ route('admin.articles.create') }}" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+            <a href="{{ route('admin.articles.create') }}" class="bg-primary hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
                 <i class="fa-solid fa-plus"></i> Berita Baru
             </a>
         </div>
@@ -25,7 +25,7 @@
                         </thead>
                         <tbody class="divide-y divide-slate-100">
                             @forelse($articles as $article)
-                            <tr class="hover:bg-emerald-50/50 transition duration-150">
+                            <tr class="hover:bg-blue-50/50 transition duration-150">
                                 <td class="py-4 px-6 font-medium text-slate-800">{{ $article->title }}</td>
                                 <td class="py-4 px-6">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
@@ -35,7 +35,7 @@
                                 <td class="py-4 px-6 text-slate-500 text-sm">{{ \Carbon\Carbon::parse($article->date)->format('d M Y') }}</td>
                                 <td class="py-4 px-6 text-center">
                                     <div class="flex items-center justify-center gap-2">
-                                        <a href="{{ route('admin.articles.edit', $article->id) }}" class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
+                                        <a href="{{ route('admin.articles.edit', $article->id) }}" class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
                                             <i class="fa-solid fa-pen-to-square text-sm"></i>
                                         </a>
                                         <form action="{{ route('admin.articles.destroy', $article->id) }}" method="POST" class="inline">
@@ -65,3 +65,4 @@
         </div>
     </div>
 </x-app-layout>
+

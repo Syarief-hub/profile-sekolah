@@ -1,4 +1,4 @@
-<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 bg-brand-dark border-b border-primary/20">
+<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-24">
             <!-- Brand Logo -->
@@ -10,55 +10,55 @@
                 <img src="{{ asset('images/logo.png') }}" alt="Logo SMAN 1 Suwawa" class="h-10 w-auto object-contain">
                 
                 <div class="flex flex-col">
-                    <span class="font-heading font-black text-2xl text-white leading-none tracking-tight">SMAN 1</span>
-                    <span class="font-bold text-slate-400 text-xs leading-none tracking-widest mt-1">SUWAWA</span>
+                    <span class="font-heading font-black text-2xl text-slate-900 leading-none tracking-tight">SMAN 1</span>
+                    <span class="font-bold text-slate-500 text-xs leading-none tracking-widest mt-1">SUWAWA</span>
                 </div>
             </a>
 
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 font-medium">
-                <a href="{{ url('/') }}" class="text-slate-300 hover:text-primary transition py-2">Beranda</a>
+                <a href="{{ url('/') }}" class="text-slate-600 hover:text-primary transition py-2">Beranda</a>
                 
                 <!-- Dropdown Profil -->
                 <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <button class="flex items-center gap-1 text-slate-300 group-hover:text-primary transition py-2">
+                    <button class="flex items-center gap-1 text-slate-600 group-hover:text-primary transition py-2">
                         Profil <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
                     <!-- Dropdown Menu -->
-                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50">
-                        <a href="{{ route('profil.sejarah') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Sejarah</a>
-                        <a href="{{ route('profil.visi-misi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Visi Misi</a>
-                        <a href="{{ route('profil.struktur-organisasi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Struktur Organisasi</a>
-                        <a href="{{ route('profil.fasilitas') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Fasilitas</a>
+                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50 border border-slate-100 rounded-lg">
+                        <a href="{{ route('profil.sejarah') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Sejarah</a>
+                        <a href="{{ route('profil.visi-misi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Visi Misi</a>
+                        <a href="{{ route('profil.struktur-organisasi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Struktur Organisasi</a>
+                        <a href="{{ route('profil.fasilitas') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Fasilitas</a>
                     </div>
                 </div>
 
                 <!-- Dropdown Akademik -->
                 <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <button class="flex items-center gap-1 text-slate-300 group-hover:text-primary transition py-2">
+                    <button class="flex items-center gap-1 text-slate-600 group-hover:text-primary transition py-2">
                         Akademik <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
-                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50">
-                        <a href="{{ route('akademik.guru-staf') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Guru & Staf</a>
-                        <a href="{{ route('akademik.kurikulum') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Kurikulum</a>
+                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50 border border-slate-100 rounded-lg">
+                        <a href="{{ route('akademik.guru-staf') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Guru & Staf</a>
+                        <a href="{{ route('akademik.kurikulum') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Kurikulum</a>
                     </div>
                 </div>
 
                 <!-- Dropdown Kesiswaan -->
                 <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <button class="flex items-center gap-1 text-slate-300 group-hover:text-primary transition py-2">
+                    <button class="flex items-center gap-1 text-slate-600 group-hover:text-primary transition py-2">
                         Kesiswaan <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
-                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50">
-                        <a href="{{ route('kesiswaan.osis-mpk') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">OSIS / MPK</a>
-                        <a href="{{ route('kesiswaan.ekstrakurikuler') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Ekstrakurikuler</a>
-                        <a href="{{ route('kesiswaan.prestasi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary transition">Prestasi</a>
+                    <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50 border border-slate-100 rounded-lg">
+                        <a href="{{ route('kesiswaan.osis-mpk') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">OSIS / MPK</a>
+                        <a href="{{ route('kesiswaan.ekstrakurikuler') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Ekstrakurikuler</a>
+                        <a href="{{ route('kesiswaan.prestasi') }}" class="block px-4 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-50 transition">Prestasi</a>
                     </div>
                 </div>
 
                 <!-- Dropdown Layanan -->
                 <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <button class="flex items-center gap-1 text-slate-300 group-hover:text-primary transition py-2">
+                    <button class="flex items-center gap-1 text-slate-600 group-hover:text-primary transition py-2">
                         Layanan <i class="fa-solid fa-chevron-down text-[10px] transition duration-200" :class="open ? 'rotate-180 text-primary' : ''"></i>
                     </button>
                     <div x-show="open" x-transition.opacity class="absolute top-full left-0 w-48 bg-white shadow-xl py-2 z-50">
@@ -67,13 +67,13 @@
                 </div>
                 
                 <!-- CTA Portal Login -->
-                <a href="{{ route('login') }}" class="bg-primary hover:bg-[#15803d] text-white px-7 py-3 rounded-full font-bold shadow-[0_4px_10px_rgba(16,185,129,0.3)] transition flex items-center gap-2 text-sm ml-4 uppercase tracking-widest">
-                    Sign in <i class="fa-solid fa-arrow-right-long text-xs ml-1"></i>
+                <a href="{{ route('login') }}" class="bg-slate-900 hover:bg-primary text-white px-7 py-3 rounded-full font-bold shadow-md transition flex items-center gap-2 text-sm ml-4 uppercase tracking-widest">
+                    Login <i class="fa-solid fa-arrow-right-long text-xs ml-1"></i>
                 </a>
             </nav>
 
             <!-- Mobile Menu Toggle Button -->
-            <button @click="mobileMenuOpen = true" class="lg:hidden text-2xl text-white focus:outline-none w-10 h-10 flex items-center justify-center rounded transition">
+            <button @click="mobileMenuOpen = true" class="lg:hidden text-2xl text-slate-800 focus:outline-none w-10 h-10 flex items-center justify-center rounded transition">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -94,12 +94,12 @@
          x-cloak style="display: none;">
          
         <!-- Sidebar Header -->
-        <div class="flex items-center justify-between p-5 border-b border-slate-100 mb-2 bg-brand-dark text-white">
+        <div class="flex items-center justify-between p-5 border-b border-slate-100 mb-2 bg-slate-50 text-slate-900">
             <div class="flex flex-col">
-                <span class="font-heading font-black text-lg text-white tracking-tight leading-none">SMAN 1</span>
-                <span class="font-bold text-slate-400 text-[10px] tracking-widest mt-1">SUWAWA</span>
+                <span class="font-heading font-black text-lg tracking-tight leading-none">SMAN 1</span>
+                <span class="font-bold text-slate-500 text-[10px] tracking-widest mt-1">SUWAWA</span>
             </div>
-            <button @click="mobileMenuOpen = false" class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/10 text-slate-300 hover:bg-red-500 hover:text-white transition">
+            <button @click="mobileMenuOpen = false" class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-red-500 hover:text-white transition">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
         </div>
@@ -159,7 +159,7 @@
 
         <div class="mt-8 mb-4 flex flex-col gap-3">
             <a href="{{ route('login') }}" class="w-full bg-primary hover:bg-[#15803d] text-white text-center py-3.5 rounded-full font-bold transition shadow-[0_4px_10px_rgba(16,185,129,0.3)] flex items-center justify-center gap-2 uppercase tracking-widest text-sm">
-                 Sign in <i class="fa-solid fa-arrow-right-long text-xs ml-1"></i>
+                 Login <i class="fa-solid fa-arrow-right-long text-xs ml-1"></i>
             </a>
         </div>
         </div>

@@ -50,10 +50,10 @@
                         </div>
 
                         <div class="flex items-center justify-between">
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition">
                                 Create Article
                             </button>
-                            <a href="{{ route('admin.articles.index') }}" class="inline-block align-baseline font-bold text-sm text-emerald-500 hover:text-emerald-800 transition">
+                            <a href="{{ route('admin.articles.index') }}" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 transition">
                                 Cancel
                             </a>
                         </div>
@@ -64,3 +64,4 @@
         </div>
     </div>
 </x-app-layout>
+

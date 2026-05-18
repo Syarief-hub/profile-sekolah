@@ -42,7 +42,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-slate-700 mb-3">Belum Ada Media</h3>
                 <p class="text-slate-500 max-w-md mx-auto">Galeri kegiatan sekolah saat ini masih kosong atau belum ada media yang diunggah.</p>
-                <a href="{{ url('/') }}" class="inline-flex mt-8 px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-emerald-700 transition shadow-sm hover:shadow-md transform hover:-translate-y-0.5">Kembali ke Beranda</a>
+                <a href="{{ url('/') }}" class="inline-flex mt-8 px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-blue-700 transition shadow-sm hover:shadow-md transform hover:-translate-y-0.5">Kembali ke Beranda</a>
             </div>
         @endif
         

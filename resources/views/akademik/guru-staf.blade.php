@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Guru & Staf
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Tenaga pendidik dan kependidikan di lingkungan SMA Negeri 1 Suwawa.
             </p>
         </div>
@@ -39,13 +39,13 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="bg-emerald-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
                 <!-- Abstract Background -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
+                        <div class="w-14 h-14 flex-shrink-0 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
                             <i class="fa-solid fa-users"></i>
                         </div>
                         <div>
@@ -78,7 +78,7 @@
                                         @else
                                             <img src="https://ui-avatars.com/api/?name={{ urlencode($p->name) }}&background=ffffff&color=0f172a&size=150" alt="{{ $p->name }}" class="w-full h-full object-cover rounded-full border-4 border-white bg-white">
                                         @endif
-                                        <div class="absolute bottom-1 right-1 bg-emerald-500 w-8 h-8 rounded-full border-[3px] border-white flex items-center justify-center text-white text-[10px] shadow-sm" title="Terverifikasi">
+                                        <div class="absolute bottom-1 right-1 bg-blue-500 w-8 h-8 rounded-full border-[3px] border-white flex items-center justify-center text-white text-[10px] shadow-sm" title="Terverifikasi">
                                             <i class="fa-solid fa-check"></i>
                                         </div>
                                     </div>

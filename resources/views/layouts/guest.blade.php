@@ -30,8 +30,8 @@
                             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         },
                         colors: {
-                            primary: '#059669', // Emerald 600
-                            secondary: '#F59E0B', // Amber 500
+                            primary: '#3B82F6', // blue 600
+                            secondary: '#bae6fd', // Amber 500
                         }
                     }
                 }
@@ -44,7 +44,7 @@
             <!-- Background Decoration -->
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-slate-100">
                 <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
-                <div class="absolute top-1/2 -left-40 w-96 h-96 bg-emerald-300/30 rounded-full blur-3xl opacity-50"></div>
+                <div class="absolute top-1/2 -left-40 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl opacity-50"></div>
                 <div class="absolute -bottom-40 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-50"></div>
             </div>
 
@@ -58,10 +58,10 @@
                     
                     <div class="absolute bottom-0 left-0 right-0 p-10 lg:p-12 text-white">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/30 bg-white/10 backdrop-blur-md mb-6 shadow-sm">
-                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                             <span class="text-xs font-bold tracking-wider uppercase">Portal Admin</span>
                         </div>
-                        <h2 class="text-3xl lg:text-4xl font-extrabold mb-4 leading-tight">Selamat Datang di<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">SMA Negeri 1 Suwawa</span></h2>
+                        <h2 class="text-3xl lg:text-4xl font-extrabold mb-4 leading-tight">Selamat Datang di<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">SMA Negeri 1 Suwawa</span></h2>
                         <p class="text-slate-300 text-sm leading-relaxed max-w-md">Sistem informasi manajemen sekolah terpadu. Silakan masuk dengan akun yang telah terdaftar untuk mengelola konten website publik sekolah Anda.</p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     
                     <!-- Mobile Logo (Hidden on Desktop) -->
                     <div class="md:hidden flex flex-col items-center text-center mb-8">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-emerald-800 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-blue-800 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg mb-4">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800">Admin Portal</h2>
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="hidden md:flex items-center gap-4 mb-10">
-                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-emerald-800 rounded-xl flex items-center justify-center text-white text-xl shadow-md">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-blue-800 rounded-xl flex items-center justify-center text-white text-xl shadow-md">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div>
@@ -101,3 +101,4 @@
         </div>
     </body>
 </html>
+

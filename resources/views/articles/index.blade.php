@@ -44,7 +44,7 @@
                             {{ Str::limit(strip_tags($article->content), 120) }}
                         </p>
                         
-                        <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-emerald-800 transition uppercase tracking-widest mt-auto border-t border-slate-100 pt-6">
+                        <a href="{{ route('articles.show', $article->slug) }}" class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:text-blue-800 transition uppercase tracking-widest mt-auto border-t border-slate-100 pt-6">
                             Baca Selengkapnya <i class="fa-solid fa-arrow-right-long text-xs transform group-hover:translate-x-2 transition duration-300"></i>
                         </a>
                     </div>
@@ -62,7 +62,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-slate-700 mb-2">Belum Ada Berita</h3>
                 <p class="text-slate-500">Saat ini belum ada berita atau informasi yang dipublikasikan.</p>
-                <a href="{{ url('/') }}" class="inline-block mt-6 px-6 py-2.5 bg-primary text-white rounded-full font-semibold hover:bg-emerald-700 transition">Kembali ke Beranda</a>
+                <a href="{{ url('/') }}" class="inline-block mt-6 px-6 py-2.5 bg-primary text-white rounded-full font-semibold hover:bg-blue-700 transition">Kembali ke Beranda</a>
             </div>
         @endif
         

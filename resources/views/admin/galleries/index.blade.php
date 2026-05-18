@@ -33,7 +33,7 @@
                                 </td>
                                 <td class="py-4 px-6 text-center">
                                     <div class="flex items-center justify-center gap-2">
-                                        <a href="{{ route('admin.galleries.edit', $gallery->id) }}" class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
+                                        <a href="{{ route('admin.galleries.edit', $gallery->id) }}" class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
                                             <i class="fa-solid fa-pen-to-square text-sm"></i>
                                         </a>
                                         <form action="{{ route('admin.galleries.destroy', $gallery->id) }}" method="POST" class="inline">
@@ -63,3 +63,4 @@
         </div>
     </div>
 </x-app-layout>
+

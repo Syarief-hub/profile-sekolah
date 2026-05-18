@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Perpustakaan Digital
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Informasi layanan, prosedur peminjaman, dan akses katalog buku online (OPAC) terintegrasi sistem SIPERPUS.
             </p>
         </div>
@@ -39,7 +39,7 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="bg-emerald-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-8 sm:p-12 relative overflow-hidden">
+            <div class="bg-blue-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-8 sm:p-12 relative overflow-hidden">
                 <!-- Abstract Design Graphic -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
                 
@@ -96,7 +96,7 @@
                         <h3 class="font-bold text-xl text-slate-800 mb-2">Akses Layanan</h3>
                         <p class="text-sm text-slate-500 mb-8">Buka portal SIPERPUS untuk mengecek ketersediaan buku incaran Anda.</p>
                         
-                        <a href="https://siperpus.smansasuwawa.site/" target="_blank" rel="noopener noreferrer" class="block w-full py-4 px-6 bg-primary hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300">
+                        <a href="https://siperpus.smansasuwawa.site/" target="_blank" rel="noopener noreferrer" class="block w-full py-4 px-6 bg-primary hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all duration-300">
                             Kunjungi SIPERPUS <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
                         </a>
                         

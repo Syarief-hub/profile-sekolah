@@ -23,18 +23,21 @@
             <div>
                 <div class="flex items-center justify-between mb-2">
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-xs font-bold text-primary hover:text-emerald-800 transition">
+                        <a href="{{ route('password.request') }}" class="text-xs font-bold text-primary hover:text-blue-800 transition">
                             {{ __('Lupa Password?') }}
                         </a>
                     @endif
                 </div>
-                <div class="relative">
+                <div class="relative" x-data="{ show: false }">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                         <i class="fa-solid fa-lock text-slate-400"></i>
                     </div>
-                    <input id="password" type="password" name="password" required autocomplete="current-password"
-                        class="block w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition duration-300 shadow-sm"
+                    <input id="password" :type="show ? 'text' : 'password'" name="password" required autocomplete="current-password"
+                        class="block w-full pl-11 pr-12 py-3 bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition duration-300 shadow-sm"
                         placeholder="••••••••">
+                    <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-primary focus:outline-none">
+                        <i class="fa-solid" :class="show ? 'fa-eye-slash' : 'fa-eye'"></i>
+                    </button>
                 </div>
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
@@ -49,9 +52,10 @@
                     <span class="text-sm font-medium text-slate-600 group-hover:text-slate-800 transition">{{ __('Ingat Saya') }}</span>
                 </label>
 
-                <button type="submit" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-primary hover:bg-emerald-700 text-white text-sm font-bold rounded-xl focus:outline-none focus:ring-4 focus:ring-primary/30 transition shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                <button type="submit" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-primary hover:bg-blue-700 text-white text-sm font-bold rounded-xl focus:outline-none focus:ring-4 focus:ring-primary/30 transition shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
                     {{ __('Log in') }} <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </button>
             </div>
         </form>
 </x-guest-layout>
+

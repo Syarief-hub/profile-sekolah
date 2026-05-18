@@ -13,7 +13,7 @@
                 <div class="p-8 text-gray-900">
                     
                     @if (session('success'))
-                        <div class="mb-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                        <div class="mb-6 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative">
                             {{ session('success') }}
                         </div>
                     @endif
@@ -79,7 +79,7 @@
 
                             <!-- Program 2 -->
                             <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
-                                <h4 class="font-bold text-md mb-3 text-emerald-600">Program Unggulan 2</h4>
+                                <h4 class="font-bold text-md mb-3 text-blue-600">Program Unggulan 2</h4>
                                 <div class="mb-3">
                                     <label for="osis_program_2_title" class="block text-gray-700 text-sm font-bold mb-1">Judul Program 2:</label>
                                     <input type="text" name="osis_program_2_title" id="osis_program_2_title" class="shadow-sm border-slate-200 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" value="{{ old('osis_program_2_title', $settings['osis_program_2_title'] ?? 'Gerakan Lingkungan Bersih') }}" required>
@@ -105,7 +105,7 @@
                         </div>
 
                         <div class="flex items-center justify-end mt-4 pt-6 border-t border-slate-100">
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
                                 <i class="fa-solid fa-floppy-disk"></i> Simpan Perubahan
                             </button>
                         </div>
@@ -116,3 +116,4 @@
         </div>
     </div>
 </x-app-layout>
+

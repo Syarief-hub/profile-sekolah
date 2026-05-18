@@ -87,8 +87,8 @@
                                               file:mr-4 file:py-2.5 file:px-4
                                               file:rounded-xl file:border-0
                                               file:text-sm file:font-semibold
-                                              file:bg-emerald-50 file:text-emerald-700
-                                              hover:file:bg-emerald-100 border border-slate-200 rounded-xl p-2 cursor-pointer bg-white transition">
+                                              file:bg-blue-50 file:text-blue-700
+                                              hover:file:bg-blue-100 border border-slate-200 rounded-xl p-2 cursor-pointer bg-white transition">
                                         <p class="text-slate-400 text-xs mt-2">Biarkan kosong jika tidak ingin mengubah foto. Format: JPG, PNG mas 2MB.</p>
                                         @error('image')<p class="text-red-500 text-xs mt-1">{{ $message }}</p>@enderror
                                     </div>
@@ -98,7 +98,7 @@
 
                         <div class="flex items-center justify-end gap-3 pt-6 border-t border-slate-100 mt-8">
                             <a href="{{ route('admin.employees.index') }}" class="px-6 py-2.5 rounded-full text-slate-600 font-bold hover:bg-slate-100 transition">Batal</a>
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2.5 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center gap-2">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-2.5 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center gap-2">
                                 <i class="fa-solid fa-save"></i> Perbarui Data
                             </button>
                         </div>
@@ -109,3 +109,4 @@
         </div>
     </div>
 </x-app-layout>
+

@@ -21,8 +21,8 @@
     </div>
 
     <!-- Sidebar Container -->
-    <div :class="mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'"
-         class="fixed inset-y-0 left-0 z-40 w-[280px] lg:w-72 transition-transform duration-300 ease-in-out lg:translate-x-0">
+    <div :class="{ 'translate-x-0': mobileMenuOpen, '-translate-x-full': !mobileMenuOpen, 'lg:translate-x-0': sidebarOpen, 'lg:-translate-x-full': !sidebarOpen }"
+         class="fixed inset-y-0 left-0 z-40 w-[280px] lg:w-72 transition-transform duration-300 ease-in-out">
          
         <!-- The Floating Glassmorphism Panel -->
         <div class="h-full py-4 lg:py-6 pl-4 lg:pl-6 pr-0 lg:pr-6 flex flex-col">
@@ -31,13 +31,13 @@
                 <!-- Logo Area -->
                 <div class="p-6 lg:p-8 flex items-center justify-center relative z-10">
                     <a href="{{ route('dashboard') }}" class="group flex flex-col items-center gap-3">
-                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-emerald-800 rounded-2xl shadow-lg shadow-primary/30 flex items-center justify-center text-white text-2xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 relative overflow-hidden">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-blue-800 rounded-2xl shadow-lg shadow-primary/30 flex items-center justify-center text-white text-2xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 relative overflow-hidden">
                             <i class="fa-solid fa-graduation-cap relative z-10"></i>
                             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 hidden group-hover:block mix-blend-overlay"></div>
                         </div>
                         <div class="text-center">
                             <div class="font-extrabold text-xl tracking-tight text-slate-800">
-                                SMAN 1 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-500">Suwawa</span>
+                                SMAN 1 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Suwawa</span>
                             </div>
                             <div class="text-[10px] font-bold tracking-widest uppercase text-slate-400 mt-0.5">Admin Portal</div>
                         </div>
@@ -143,3 +143,4 @@
     }
 </style>
 @endonce
+

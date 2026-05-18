@@ -13,7 +13,7 @@
                 <div class="p-8 text-gray-900">
                     
                     @if (session('success'))
-                        <div class="mb-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                        <div class="mb-6 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative">
                             {{ session('success') }}
                         </div>
                     @endif
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="flex items-center justify-end mt-4 pt-6 border-t border-slate-100">
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
                                 <i class="fa-solid fa-floppy-disk"></i> Simpan Perubahan
                             </button>
                         </div>
@@ -52,3 +52,4 @@
         </div>
     </div>
 </x-app-layout>
+

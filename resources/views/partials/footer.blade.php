@@ -6,17 +6,17 @@
             <p class="text-emerald-50 text-sm md:text-base font-medium">Pelajari lebih dalam mengenai sejarah berdiri, visi, misi, dan dedikasi institusi kami.</p>
         </div>
         <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-            <a href="{{ route('profil.sejarah') }}" class="bg-brand-dark text-white hover:bg-secondary px-6 py-3.5 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
+            <a href="{{ route('profil.sejarah') }}" class="bg-slate-900 text-white hover:bg-slate-800 px-6 py-3.5 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
                 <i class="fa-solid fa-clock-rotate-left"></i> Sejarah
             </a>
-            <a href="{{ route('profil.visi-misi') }}" class="bg-white text-brand-dark hover:bg-emerald-50 px-6 py-3.5 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
+            <a href="{{ route('profil.visi-misi') }}" class="bg-white text-slate-900 hover:bg-slate-50 px-6 py-3.5 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
                 <i class="fa-solid fa-bullseye"></i> Visi Misi
             </a>
         </div>
     </div>
 </div>
 
-<footer class="bg-[#011c15] text-slate-300 pt-32 pb-8 border-t border-brand-dark mt-auto relative">
+<footer class="bg-brand-dark text-slate-400 pt-32 pb-8 mt-auto relative">
     <!-- Abstract wavy shapes behind footer -->
     <div class="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
         <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="absolute -right-1/4 bottom-0 w-full h-full">
@@ -33,21 +33,21 @@
                     <img src="{{ asset('images/logo.png') }}" alt="Logo SMAN 1 Suwawa" class="h-12 w-auto object-contain">
                     <div class="flex flex-col">
                         <span class="font-heading font-black text-2xl text-white leading-none tracking-tight">SMAN 1</span>
-                        <span class="font-bold text-slate-500 text-xs leading-none tracking-widest mt-1">SUWAWA</span>
+                        <span class="font-bold text-slate-400 text-xs leading-none tracking-widest mt-1">SUWAWA</span>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <span class="inline-block px-3 py-1 bg-white/10 text-emerald-400 text-xs font-bold rounded-full border border-white/5 tracking-wider">NPSN: 40500897</span>
+                    <span class="inline-block px-3 py-1 bg-white/10 text-primary text-xs font-bold rounded-full border border-white/5 tracking-wider">NPSN: 40500897</span>
                 </div>
                 <p class="text-sm text-slate-400 leading-relaxed mb-8 block font-medium">
                     Sekolah rujukan pencetak generasi unggul, berprestasi, berakhlak mulia, dan berwawasan global yang tanggap terhadap tuntutan kompetensi abad 21.
                 </p>
                 <!-- Social Media -->
                 <div class="flex gap-3">
-                    <a href="#" class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 hover:bg-primary hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@
                     Lokasi
                     <span class="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-primary"></span>
                 </h4>
-                <div class="w-full h-40 bg-brand-dark rounded-xl overflow-hidden border-2 border-white/5">
+                <div class="w-full h-40 bg-brand-dark rounded-xl overflow-hidden border border-white/10">
                     <iframe src="https://maps.google.com/maps?q=SMAN%201%20Suwawa,%20Bone%20Bolango,%20Gorontalo&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -107,11 +107,11 @@
         </div>
 
         <!-- Copyright -->
-        <div class="border-t border-brand-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
             <p>&copy; {{ date('Y') }} SMAN 1 Suwawa. All rights reserved.</p>
             <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition">Terms & Conditions</a>
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-primary transition">Terms & Conditions</a>
+                <a href="#" class="hover:text-primary transition">Privacy Policy</a>
             </div>
         </div>
     </div>

@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Jejak & Sejarah
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Menelusuri perjalanan panjang dan dedikasi kami dalam dunia pendidikan sejak tahap perintisan pertama kali.
             </p>
         </div>
@@ -39,12 +39,12 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Content Wrapper matching the 'Welcome' Card style -->
-            <div class="w-full bg-emerald-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 lg:p-16 relative overflow-hidden group">
+            <div class="w-full bg-blue-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 lg:p-16 relative overflow-hidden group">
                 <!-- Inner decoration background -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700 pointer-events-none"></div>
                 
-                <div class="flex items-center gap-4 mb-8 relative z-10 border-b-2 border-emerald-100 pb-6">
-                    <div class="w-14 h-14 bg-white text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100 shrink-0">
+                <div class="flex items-center gap-4 mb-8 relative z-10 border-b-2 border-blue-100 pb-6">
+                    <div class="w-14 h-14 bg-white text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100 shrink-0">
                         <i class="fa-solid fa-book-open-reader"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Catatan Perjalanan</h2>

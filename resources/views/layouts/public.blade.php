@@ -31,12 +31,12 @@
                     },
                     colors: {
                         primary: {
-                            DEFAULT: '#10b981', // Emerald 500
-                            100: '#d1fae5', 
+                            DEFAULT: '#3B82F6', // Blue 500
+                            100: '#dbeafe', 
                         },
-                        secondary: '#f97316', // Orange 500
+                        secondary: '#bae6fd', // Sky 200
                         brand: {
-                            dark: '#022c22', // Teal 950
+                            dark: '#0f172a', // Slate 900
                         }
                     }
                 }

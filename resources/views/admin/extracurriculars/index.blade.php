@@ -4,7 +4,7 @@
             <h2 class="font-bold text-2xl text-slate-800 leading-tight flex items-center gap-2">
                 <i class="fa-solid fa-volleyball text-primary/70"></i> {{ __('Manajemen Ekstrakurikuler') }}
             </h2>
-            <a href="{{ route('admin.extracurriculars.create') }}" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+            <a href="{{ route('admin.extracurriculars.create') }}" class="bg-primary hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
                 <i class="fa-solid fa-plus"></i> Tambah Ekskul
             </a>
         </div>
@@ -13,7 +13,7 @@
     <div class="py-6">
         <div class="max-w-full mx-auto">
             @if(session('success'))
-            <div class="bg-emerald-50 border border-emerald-200 text-emerald-600 px-4 py-3 rounded-xl mb-4" role="alert">
+            <div class="bg-blue-50 border border-blue-200 text-blue-600 px-4 py-3 rounded-xl mb-4" role="alert">
                 <span class="block sm:inline">{{ session('success') }}</span>
             </div>
             @endif
@@ -31,7 +31,7 @@
                         </thead>
                         <tbody class="divide-y divide-slate-100">
                             @forelse($extracurriculars as $ekskul)
-                            <tr class="hover:bg-emerald-50/50 transition duration-150">
+                            <tr class="hover:bg-blue-50/50 transition duration-150">
                                 <td class="py-4 px-6">
                                     <div class="flex items-center gap-3">
                                         @if($ekskul->image)
@@ -52,7 +52,7 @@
                                         {{ $ekskul->category == 'Olahraga' ? 'bg-orange-100 text-orange-700 border-orange-200' : '' }}
                                         {{ $ekskul->category == 'Seni & Budaya' ? 'bg-pink-100 text-pink-700 border-pink-200' : '' }}
                                         {{ $ekskul->category == 'Akademik / Sains' ? 'bg-blue-100 text-blue-700 border-blue-200' : '' }}
-                                        {{ $ekskul->category == 'Kedisiplinan & Bela Negara' ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : '' }}
+                                        {{ $ekskul->category == 'Kedisiplinan & Bela Negara' ? 'bg-blue-100 text-blue-700 border-blue-200' : '' }}
                                         border bg-slate-100 text-slate-600">
                                         {{ $ekskul->category }}
                                     </span>
@@ -62,7 +62,7 @@
                                 </td>
                                 <td class="py-4 px-6 text-center">
                                     <div class="flex items-center justify-center gap-2">
-                                        <a href="{{ route('admin.extracurriculars.edit', $ekskul->id) }}" class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
+                                        <a href="{{ route('admin.extracurriculars.edit', $ekskul->id) }}" class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
                                             <i class="fa-solid fa-pen-to-square text-sm"></i>
                                         </a>
                                         <form action="{{ route('admin.extracurriculars.destroy', $ekskul->id) }}" method="POST" class="inline">
@@ -92,3 +92,4 @@
         </div>
     </div>
 </x-app-layout>
+

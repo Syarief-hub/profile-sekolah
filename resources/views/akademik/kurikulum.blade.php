@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Kurikulum
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Struktur program dan alur pembelajaran holistik di SMA Negeri 1 Suwawa.
             </p>
         </div>
@@ -39,13 +39,13 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="bg-emerald-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
                 <!-- Abstract Background -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
+                        <div class="w-14 h-14 flex-shrink-0 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
                         <div>
@@ -76,9 +76,9 @@
                                     {!! $global_settings['kurikulum_intro'] ?? 'SMA Negeri 1 Suwawa telah menerapkan <strong>Kurikulum Merdeka</strong> penuh. Kami memberikan kebebasan kepada peserta didik untuk memilih mata pelajaran mendalam sesuai dengan minat, bakat, dan aspirasi akademis mereka, sembari berfokus pada asimilasi materi esensial dan pengembangan karakter <b>Profil Pelajar Pancasila</b>.' !!}
                                 </p>
                                 <div class="mt-6 flex flex-wrap gap-3 text-xs md:text-sm font-bold">
-                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-emerald-500"></i> Fokus Esensial</span>
-                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-emerald-500"></i> Pengembangan Karakter</span>
-                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-emerald-500"></i> Mandiri & Fleksibel</span>
+                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-blue-500"></i> Fokus Esensial</span>
+                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-blue-500"></i> Pengembangan Karakter</span>
+                                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-blue-700 rounded-lg shadow-sm border border-blue-100"><i class="fa-solid fa-check-circle text-blue-500"></i> Mandiri & Fleksibel</span>
                                 </div>
                             </div>
                         </div>
@@ -87,22 +87,22 @@
                     <!-- Struktur Kurikulum -->
                     <div>
                         <div class="inline-flex items-center gap-4 mb-6 relative">
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl shadow-sm border border-emerald-100">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl shadow-sm border border-blue-100">
                                 <i class="fa-solid fa-layer-group"></i>
                             </div>
                             <div>
                                 <h3 class="text-2xl font-black text-slate-800 tracking-tight">Struktur Kurikulum</h3>
-                                <div class="h-1 w-12 bg-emerald-500 rounded-full mt-1"></div>
+                                <div class="h-1 w-12 bg-blue-500 rounded-full mt-1"></div>
                             </div>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                             <!-- Fase E -->
                             <div class="bg-white border border-slate-100 shadow-sm rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 p-6 text-white relative overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-teal-600 p-6 text-white relative overflow-hidden">
                                     <i class="fa-solid fa-seedling absolute -right-4 -bottom-4 text-7xl opacity-20 transform -rotate-12 group-hover:scale-110 transition-transform duration-500"></i>
                                     <h4 class="font-black text-2xl relative z-10">Fase E</h4>
-                                    <p class="text-emerald-50 text-sm font-medium mt-1 relative z-10 flex items-center gap-2">
+                                    <p class="text-blue-50 text-sm font-medium mt-1 relative z-10 flex items-center gap-2">
                                         <i class="fa-solid fa-chalkboard-user"></i> Diterapkan di Kelas X Umum
                                     </p>
                                 </div>
@@ -112,12 +112,12 @@
                                     </p>
                                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Muatan Pelajaran</h5>
                                     <ul class="space-y-3 text-sm font-semibold text-slate-700">
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Pendidikan Agama dan Budi Pekerti</li>
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Pendidikan Pancasila</li>
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Bahasa Indonesia, Matematika, B. Inggris</li>
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> IPA (Fisika, Kimia, Biologi)</li>
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> IPS (Sosiologi, Ekonomi, Sejarah, Geografi)</li>
-                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> PJOK & Seni Budaya / Keterampilan</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Pendidikan Agama dan Budi Pekerti</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Pendidikan Pancasila</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> Bahasa Indonesia, Matematika, B. Inggris</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> IPA (Fisika, Kimia, Biologi)</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> IPS (Sosiologi, Ekonomi, Sejarah, Geografi)</li>
+                                        <li class="flex items-start gap-3"><div class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div> PJOK & Seni Budaya / Keterampilan</li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
                                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 mb-5 rounded-lg bg-amber-50 text-amber-600 border border-amber-200 text-xs font-bold tracking-widest uppercase">
                                     <i class="fa-solid fa-hands-holding-child"></i> Project-based Learning
                                 </div>
-                                <h4 class="font-black text-2xl md:text-3xl text-slate-800 mb-4 tracking-tight">Projek Penguatan <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Profil Pelajar Pancasila (P5)</span></h4>
+                                <h4 class="font-black text-2xl md:text-3xl text-slate-800 mb-4 tracking-tight">Projek Penguatan <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-500">Profil Pelajar Pancasila (P5)</span></h4>
                                 <p class="text-slate-500 text-sm md:text-base leading-relaxed mb-6">{!! $global_settings['kurikulum_p5_desc'] ?? 'Sebagai inti dari Kurikulum Merdeka, sekolah kami menyelenggarakan kegiatan kokurikuler khusus P5 yang memakan alokasi waktu hingga 30% per semester. Siswa diajarkan menuntaskan persoalan nyata melalui projek lintas disiplin ilmu.' !!}</p>
                                 
                                 <!-- Tags P5 Tema -->
@@ -197,3 +197,5 @@
         </div>
     </section>
 @endsection
+
+

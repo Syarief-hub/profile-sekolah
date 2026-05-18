@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Struktur Organisasi
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Susunan kepengurusan dan sistem manajemen manajerial terpadu di lingkungan SMA Negeri 1 Suwawa.
             </p>
         </div>
@@ -39,13 +39,13 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="bg-emerald-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
                 <!-- Abstract Background -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 flex-shrink-0 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
+                        <div class="w-14 h-14 flex-shrink-0 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
                             <i class="fa-solid fa-sitemap"></i>
                         </div>
                         <div>
@@ -142,17 +142,17 @@
                             </div>
 
                             <!-- Waka Kesiswaan -->
-                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-emerald-500 group relative overflow-hidden">
-                                <div class="absolute inset-0 bg-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-blue-500 group relative overflow-hidden">
+                                <div class="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 @if(isset($global_settings['structure_waka_kesiswaan_photo']) && $global_settings['structure_waka_kesiswaan_photo'])
-                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_kesiswaan_photo']) }}" alt="Waka Kesiswaan" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-emerald-200 group-hover:scale-110 transition-transform duration-300">
+                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_kesiswaan_photo']) }}" alt="Waka Kesiswaan" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-blue-200 group-hover:scale-110 transition-transform duration-300">
                                 @else
-                                    <div class="w-14 h-14 bg-emerald-50 rounded-full mx-auto flex items-center justify-center mb-4 text-emerald-500 text-xl relative z-10 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300 border border-emerald-100">
+                                    <div class="w-14 h-14 bg-blue-50 rounded-full mx-auto flex items-center justify-center mb-4 text-blue-500 text-xl relative z-10 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 border border-blue-100">
                                         <i class="fa-solid fa-users"></i>
                                     </div>
                                 @endif
                                 <h4 class="font-bold text-slate-800 mb-1 relative z-10">{{ $global_settings['structure_waka_kesiswaan_name'] ?? 'Nama Waka Kesiswaan, S.Pd' }}</h4>
-                                <p class="text-xs font-semibold text-emerald-600 relative z-10">Urusan Kesiswaan</p>
+                                <p class="text-xs font-semibold text-blue-600 relative z-10">Urusan Kesiswaan</p>
                             </div>
 
                             <!-- Waka Sarpras -->

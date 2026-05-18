@@ -4,7 +4,7 @@
             <h2 class="font-bold text-2xl text-slate-800 leading-tight flex items-center gap-2">
                 <i class="fa-solid fa-trophy text-primary/70"></i> {{ __('Manajemen Prestasi Siswa') }}
             </h2>
-            <a href="{{ route('admin.achievements.create') }}" class="bg-primary hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+            <a href="{{ route('admin.achievements.create') }}" class="bg-primary hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-full text-sm transition shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
                 <i class="fa-solid fa-plus"></i> Tambah Prestasi
             </a>
         </div>
@@ -13,7 +13,7 @@
     <div class="py-6">
         <div class="max-w-full mx-auto">
             @if(session('success'))
-            <div class="bg-emerald-50 border border-emerald-200 text-emerald-600 px-4 py-3 rounded-xl mb-4" role="alert">
+            <div class="bg-blue-50 border border-blue-200 text-blue-600 px-4 py-3 rounded-xl mb-4" role="alert">
                 <span class="block sm:inline">{{ session('success') }}</span>
             </div>
             @endif
@@ -32,7 +32,7 @@
                         </thead>
                         <tbody class="divide-y divide-slate-100">
                             @forelse($achievements as $prestasi)
-                            <tr class="hover:bg-emerald-50/50 transition duration-150">
+                            <tr class="hover:bg-blue-50/50 transition duration-150">
                                 <td class="py-4 px-6">
                                     <div class="flex items-center gap-3">
                                         @if($prestasi->image)
@@ -63,7 +63,7 @@
                                 </td>
                                 <td class="py-4 px-6 text-center">
                                     <div class="flex items-center justify-center gap-2">
-                                        <a href="{{ route('admin.achievements.edit', $prestasi->id) }}" class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
+                                        <a href="{{ route('admin.achievements.edit', $prestasi->id) }}" class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-500 hover:text-white flex items-center justify-center transition tooltip" title="Edit">
                                             <i class="fa-solid fa-pen-to-square text-sm"></i>
                                         </a>
                                         <form action="{{ route('admin.achievements.destroy', $prestasi->id) }}" method="POST" class="inline">
@@ -93,3 +93,4 @@
         </div>
     </div>
 </x-app-layout>
+

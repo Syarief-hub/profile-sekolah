@@ -13,7 +13,7 @@
                 <div class="p-8 text-gray-900">
                     
                     @if (session('success'))
-                        <div class="mb-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                        <div class="mb-6 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative">
                             {{ session('success') }}
                         </div>
                     @endif
@@ -28,8 +28,8 @@
                         </div>
                     @endif
 
-                    <div class="mb-8 p-4 bg-emerald-50 border-l-4 border-primary rounded-r-lg">
-                        <p class="text-sm text-emerald-800">
+                    <div class="mb-8 p-4 bg-blue-50 border-l-4 border-primary rounded-r-lg">
+                        <p class="text-sm text-blue-800">
                             <strong>Catatan:</strong> Data Kepala Sekolah diambil secara otomatis dari menu <a href="{{ route('admin.settings.sekolah') }}" class="font-bold underline hover:text-primary">Profil Sambutan</a>. Silakan lengkapi nama pejabat untuk struktur di bawah ini.
                         </p>
                     </div>
@@ -53,7 +53,7 @@
                                             <img src="{{ asset('storage/' . $settings['structure_komite_photo']) }}" alt="Komite" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_komite_photo" id="structure_komite_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_komite_photo" id="structure_komite_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
 
                                 <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -66,7 +66,7 @@
                                             <img src="{{ asset('storage/' . $settings['structure_tu_photo']) }}" alt="Kepala TU" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_tu_photo" id="structure_tu_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_tu_photo" id="structure_tu_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
                             </div>
 
@@ -84,7 +84,7 @@
                                             <img src="{{ asset('storage/' . $settings['structure_waka_kurikulum_photo']) }}" alt="Waka Kurikulum" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_waka_kurikulum_photo" id="structure_waka_kurikulum_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_waka_kurikulum_photo" id="structure_waka_kurikulum_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
 
                                 <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -97,7 +97,7 @@
                                             <img src="{{ asset('storage/' . $settings['structure_waka_kesiswaan_photo']) }}" alt="Waka Kesiswaan" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_waka_kesiswaan_photo" id="structure_waka_kesiswaan_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_waka_kesiswaan_photo" id="structure_waka_kesiswaan_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
 
                                 <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -110,7 +110,7 @@
                                             <img src="{{ asset('storage/' . $settings['structure_waka_sarpras_photo']) }}" alt="Waka Sarpras" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_waka_sarpras_photo" id="structure_waka_sarpras_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_waka_sarpras_photo" id="structure_waka_sarpras_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
 
                                 <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -123,13 +123,13 @@
                                             <img src="{{ asset('storage/' . $settings['structure_waka_humas_photo']) }}" alt="Waka Humas" class="h-20 w-20 object-cover rounded-lg shadow-sm border border-slate-200">
                                         </div>
                                     @endif
-                                    <input type="file" name="structure_waka_humas_photo" id="structure_waka_humas_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 transition" accept="image/*">
+                                    <input type="file" name="structure_waka_humas_photo" id="structure_waka_humas_photo" class="text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition" accept="image/*">
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex items-center justify-end mt-4 pt-6 border-t border-slate-100">
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
                                 <i class="fa-solid fa-floppy-disk"></i> Simpan Struktur
                             </button>
                         </div>
@@ -140,3 +140,4 @@
         </div>
     </div>
 </x-app-layout>
+

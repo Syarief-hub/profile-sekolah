@@ -22,7 +22,7 @@
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-6 drop-shadow-xl">
                 Visi, Misi & Tujuan
             </h1>
-            <p class="text-emerald-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p class="text-blue-50/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                 Arah, cita-cita strategis, dan dedikasi luhur pendidikan berkelanjutan di SMA Negeri 1 Suwawa.
             </p>
         </div>
@@ -40,11 +40,11 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- Visi Section -->
-            <div class="bg-emerald-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 mb-16 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 mb-16 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
                 <div class="flex items-center gap-4 mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-emerald-100">
+                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Visi Sekolah</h2>
@@ -78,7 +78,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     <!-- Point 1: Cerdas -->
-                    <div class="bg-white rounded-[2rem] p-8 shadow-sm border-[4px] border-emerald-50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 transition duration-300 relative overflow-hidden group">
+                    <div class="bg-white rounded-[2rem] p-8 shadow-sm border-[4px] border-blue-50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-2 transition duration-300 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                         <h3 class="text-2xl font-bold text-primary font-heading mb-6 relative inline-block">
                             "Cerdas"
@@ -86,19 +86,19 @@
                         </h3>
                         <ul class="space-y-4 text-slate-600">
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">1</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">1</span>
                                 <span class="leading-relaxed">Menciptakan suasana religius di sekolah melalui kegiatan keagamaan.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">2</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">2</span>
                                 <span class="leading-relaxed">Melaksanakan kegiatan belajar mengajar yang berorientasi pada peningkatan kemampuan dan kompetensi peserta didik.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">3</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">3</span>
                                 <span class="leading-relaxed">Membentuk peserta didik yang sadar pentingnya ilmu pengetahuan dan teknologi yang berlandaskan nilai spiritual dan sosial.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">4</span>
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold mt-0.5">4</span>
                                 <span class="leading-relaxed">Meningkatkan pendidikan karakter bangsa melalui implementasi penguatan pendidikan karakter.</span>
                             </li>
                         </ul>
@@ -157,11 +157,11 @@
             </div>
 
             <!-- Tujuan Section -->
-            <div class="bg-emerald-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 mb-16 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 mb-16 relative overflow-hidden group">
                 <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/4 group-hover:bg-secondary/10 transition duration-700"></div>
                 
                 <div class="flex items-center gap-4 mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-yellow-50 text-secondary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-yellow-100">
+                    <div class="w-14 h-14 bg-amber-50 text-secondary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-amber-100">
                         <i class="fa-solid fa-flag-checkered"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Tujuan Sekolah</h2>
@@ -226,3 +226,4 @@
         </div>
     </section>
 @endsection
+

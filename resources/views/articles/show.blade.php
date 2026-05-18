@@ -39,7 +39,7 @@
             
             <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500 font-medium">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-primary">
+                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary">
                         <i class="fa-solid fa-user-pen"></i>
                     </div>
                     <span>{{ $article->user->name ?? 'Admin' }}</span>
@@ -67,7 +67,7 @@
         <!-- Article Content -->
         <article class="prose prose-lg prose-slate max-w-none 
             prose-headings:font-heading prose-headings:font-bold prose-headings:text-slate-800
-            prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-emerald-700 hover:prose-a:underline
+            prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:text-blue-700 hover:prose-a:underline
             prose-img:rounded-2xl prose-img:shadow-md
             prose-blockquote:border-l-4 prose-blockquote:border-secondary prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:text-slate-700
             mb-16 pb-12 border-b border-slate-100">

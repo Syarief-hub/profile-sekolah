@@ -39,19 +39,29 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div>
+                            <div x-data="{ show: false }">
                                 <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-                                <input type="password" name="password" id="password" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required minlength="8">
+                                <div class="relative">
+                                    <input :type="show ? 'text' : 'password'" name="password" id="password" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 pl-3 pr-10 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required minlength="8">
+                                    <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-primary focus:outline-none">
+                                        <i class="fa-solid" :class="show ? 'fa-eye-slash' : 'fa-eye'"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div>
+                            <div x-data="{ show: false }">
                                 <label for="password_confirmation" class="block text-gray-700 text-sm font-bold mb-2">Konfirmasi Password:</label>
-                                <input type="password" name="password_confirmation" id="password_confirmation" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required minlength="8">
+                                <div class="relative">
+                                    <input :type="show ? 'text' : 'password'" name="password_confirmation" id="password_confirmation" class="shadow-sm border-slate-200 rounded-lg w-full py-2.5 pl-3 pr-10 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required minlength="8">
+                                    <button type="button" @click="show = !show" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-primary focus:outline-none">
+                                        <i class="fa-solid" :class="show ? 'fa-eye-slash' : 'fa-eye'"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
                         <div class="flex items-center justify-end mt-4 pt-6 border-t border-slate-100">
                             <a href="{{ route('admin.users.index') }}" class="text-slate-500 hover:text-slate-700 font-bold py-2 px-4 mr-4 transition">Batal</a>
-                            <button type="submit" class="bg-primary hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/30 shadow-md hover:shadow-lg transition hover:-translate-y-0.5 flex items-center gap-2">
                                 <i class="fa-solid fa-save"></i> Simpan Akun
                             </button>
                         </div>
@@ -62,3 +72,4 @@
         </div>
     </div>
 </x-app-layout>
+

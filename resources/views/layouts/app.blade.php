@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel Admin Panel') }}</title>
+        <title>@yield('title', 'Admin Panel') | {{ config('app.name', 'SMAN 1 Suwawa') }}</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
@@ -31,8 +31,8 @@
                             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         },
                         colors: {
-                            primary: '#059669', // Emerald 600
-                            secondary: '#F59E0B', // Amber 500
+                            primary: '#3B82F6', // blue 600
+                            secondary: '#bae6fd', // Amber 500
                         }
                     }
                 }
@@ -44,17 +44,17 @@
         <!-- Animated Background Elements -->
         <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
             <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-pulse" style="animation-duration: 4s;"></div>
-            <div class="absolute top-1/2 -left-40 w-96 h-96 bg-emerald-300/20 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-pulse" style="animation-duration: 7s;"></div>
-            <div class="absolute -bottom-40 right-1/4 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-pulse" style="animation-duration: 5s;"></div>
+            <div class="absolute top-1/2 -left-40 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-pulse" style="animation-duration: 7s;"></div>
+            <div class="absolute -bottom-40 right-1/4 w-96 h-96 bg-sky-200/20 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-pulse" style="animation-duration: 5s;"></div>
             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
         </div>
 
-        <div class="min-h-screen flex relative z-10 w-full">
+        <div class="min-h-screen flex relative z-10 w-full" x-data="{ sidebarOpen: true }">
             <!-- Navbar / Sidebar -->
             @include('layouts.navigation')
 
             <!-- Main Content Area -->
-            <div class="flex-1 flex flex-col min-w-0 transition-all duration-300 ml-0 lg:ml-72 bg-slate-50/50 backdrop-blur-3xl min-h-screen border-l border-white/50">
+            <div :class="sidebarOpen ? 'lg:ml-72' : 'lg:ml-0'" class="flex-1 flex flex-col min-w-0 transition-all duration-300 ml-0 bg-slate-50/50 backdrop-blur-3xl min-h-screen border-l border-white/50">
                 
                 <!-- Top Header (Mobile Toggle & Breadcrumbs/Header) -->
                 @isset($header)
@@ -64,6 +64,10 @@
                             <div class="flex-1 flex items-center min-w-0 pr-4">
                                 <!-- Spacer for the fixed mobile hamburger button -->
                                 <div class="w-12 shrink-0 lg:hidden"></div>
+                                <!-- Desktop Sidebar Toggle Button -->
+                                <button @click="sidebarOpen = !sidebarOpen" class="hidden lg:flex w-10 h-10 rounded-xl bg-white border border-slate-200 items-center justify-center text-slate-500 hover:text-primary hover:border-primary/30 transition shadow-sm mr-4 shrink-0 focus:outline-none">
+                                    <i class="fa-solid fa-bars-staggered"></i>
+                                </button>
                                 <div class="w-full">
                                     {{ $header }}
                                 </div>
@@ -76,7 +80,7 @@
                                 </a>
                                 <div class="h-8 w-px bg-slate-200"></div>
                                 <div class="flex items-center gap-3 bg-white border border-slate-200 py-1.5 px-2 rounded-full shadow-sm cursor-pointer hover:shadow-md transition">
-                                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center text-white text-xs font-bold shadow-inner">
+                                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-inner">
                                         {{ substr(Auth::user()->name, 0, 1) }}
                                     </div>
                                     <span class="text-sm font-semibold text-slate-700 pr-2">{{ explode(' ', Auth::user()->name)[0] }}</span>
@@ -103,3 +107,4 @@
         </div>
     </body>
 </html>
+
