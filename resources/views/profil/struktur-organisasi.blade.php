@@ -7,8 +7,8 @@
     <section class="relative bg-brand-dark pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop" alt="Campus Background" class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/90 to-brand-dark"></div>
+            <img src="{{ asset('images/header-bg.jpg') }}" alt="Campus Background" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark"></div>
         </div>
         
         <!-- Abstract Decorations -->
@@ -39,151 +39,164 @@
     <section class="pb-24 lg:pb-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="bg-blue-50 rounded-[2.5rem] border-[8px] border-white shadow-xl shadow-primary/5 p-6 sm:p-8 md:p-12 relative overflow-hidden group">
-                <!-- Abstract Background -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
+            <div class="bg-[#f4f5f7] rounded-[2.5rem] p-6 sm:p-8 md:p-12 relative overflow-hidden group border border-slate-200 shadow-sm">
                 
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 relative z-10 border-b border-slate-100 pb-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 flex-shrink-0 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
-                            <i class="fa-solid fa-sitemap"></i>
+                <!-- Header Area -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6 relative z-10">
+                    <!-- Title -->
+                    <div>
+                        <h4 class="text-slate-400 font-semibold tracking-[0.2em] uppercase text-xs sm:text-sm mb-1">Struktur Organisasi</h4>
+                        <h2 class="text-3xl sm:text-4xl font-black text-slate-700 uppercase tracking-tight mb-3">Infografis</h2>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-pink-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-fuchsia-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-indigo-500"></div>
                         </div>
-                        <div>
-                            <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-800 tracking-tight leading-none mb-1">Bagan Struktur</h2>
-                            <p class="text-slate-500 text-sm">Informasi struktur organisasi sekolah</p>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="max-w-md text-right hidden md:block">
+                        <p class="text-slate-500 text-sm leading-relaxed mb-3">
+                            Susunan kepengurusan dan sistem manajemen manajerial terpadu di lingkungan SMA Negeri 1 Suwawa.
+                        </p>
+                        <div class="flex justify-end gap-5 text-xs text-slate-600 font-medium">
+                            <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-rose-500"></div> Pimpinan</div>
+                            <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-purple-500"></div> Wakil</div>
+                            <div class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-blue-500"></div> Staf</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="space-y-12 relative z-10 py-8">
-                    <!-- Level 1: Kepala Sekolah -->
-                    <div class="flex flex-col items-center relative">
-                        <div class="bg-white border border-slate-200 shadow-xl rounded-3xl p-8 text-center w-full max-w-sm relative overflow-hidden group hover:shadow-2xl hover:border-primary/30 transition-all duration-300 z-10">
-                            <div class="absolute top-0 inset-x-0 h-2 bg-primary"></div>
-                            @if(isset($global_settings['principal_photo']) && $global_settings['principal_photo'])
-                                <img src="{{ asset('storage/' . $global_settings['principal_photo']) }}" alt="Kepala Sekolah" class="w-24 h-24 object-cover border-4 border-white shadow-md rounded-full mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
-                            @else
-                                <div class="w-24 h-24 bg-slate-50 border-4 border-white shadow-md rounded-full mx-auto flex items-center justify-center mb-5 text-primary text-4xl group-hover:scale-110 group-hover:bg-primary/5 transition-transform duration-300">
-                                    <i class="fa-solid fa-user-tie"></i>
+                <!-- Tree Chart -->
+                <div class="relative w-full max-w-6xl mx-auto py-6 z-10">
+                    
+                    @if($pimpinan->count() > 0)
+                    <!-- LEVEL 1 (Pimpinan) -->
+                    <div class="relative flex flex-col items-center">
+                        <div class="flex flex-wrap justify-center gap-10">
+                            @foreach($pimpinan as $member)
+                            <div class="text-center relative">
+                                <!-- Photo component -->
+                                <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5 group">
+                                    <div class="absolute -inset-[3px] rounded-full bg-gradient-to-r from-rose-500 to-pink-500"></div>
+                                    <div class="absolute -inset-[3px] bottom-[-10px] sm:bottom-[-14px] rounded-full bg-gradient-to-r from-rose-500 to-pink-500 transition-transform duration-300 group-hover:scale-105"></div>
+                                    <div class="absolute inset-0 rounded-full bg-[#f4f5f7] scale-[1.05]"></div>
+                                    <div class="relative w-full h-full rounded-full overflow-hidden z-10 border-[3px] sm:border-[4px] border-white bg-slate-200">
+                                        @if($member->photo)
+                                            <img src="{{ asset('storage/' . $member->photo) }}" alt="{{ $member->position }}" class="w-full h-full object-cover object-top">
+                                        @else
+                                            <div class="w-full h-full flex items-center justify-center text-slate-400 bg-white"><i class="fa-solid fa-user-tie text-5xl"></i></div>
+                                        @endif
+                                    </div>
                                 </div>
-                            @endif
-                            <h3 class="font-black text-2xl text-slate-800 mb-1">{{ $global_settings['principal_name'] ?? 'Nama Kepala Sekolah' }}</h3>
-                            <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold">
-                                Kepala Sekolah
-                            </span>
+                                <h3 class="font-black text-slate-800 uppercase tracking-widest text-[14px] sm:text-[16px] mb-1">{{ $member->name }}</h3>
+                                <p class="text-[11px] sm:text-[12px] text-slate-500 font-medium uppercase tracking-widest">{{ $member->position }}</p>
+                            </div>
+                            @endforeach
                         </div>
-                    </div>
 
-                    <!-- PENGHUBUNG KEPSEK KE BAWAH -->
-                    <div class="hidden md:flex justify-center -my-12 relative z-0">
-                        <div class="w-px h-16 bg-gradient-to-b from-primary/50 to-slate-200"></div>
+                        <!-- Vertical Line down from Level 1 -->
+                        @if($wakil->count() > 0 || $staf->count() > 0)
+                            <div class="w-px h-10 sm:h-14 bg-slate-300 mt-3 hidden md:block"></div>
+                        @endif
                     </div>
+                    @endif
 
-                    <!-- Level 2: Komite & Kepala Tata Usaha -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-6 md:pt-0">
-                        <div class="bg-white border border-slate-100 shadow-lg rounded-2xl p-6 flex items-center gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-rose-500">
-                            @if(isset($global_settings['structure_komite_photo']) && $global_settings['structure_komite_photo'])
-                                <img src="{{ asset('storage/' . $global_settings['structure_komite_photo']) }}" alt="Ketua Komite" class="w-16 h-16 object-cover rounded-2xl shadow-sm flex-shrink-0 border border-rose-100">
-                            @else
-                                <div class="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-500 text-2xl flex-shrink-0">
-                                    <i class="fa-solid fa-users-viewfinder"></i>
+                    @if($wakil->count() > 0)
+                    <!-- LEVEL 2 (Wakil) -->
+                    <div class="relative flex flex-col items-center w-full">
+                        <!-- Horizontal Line -->
+                        @if($wakil->count() > 1)
+                            @php
+                                $waka_width = (($wakil->count() - 1) / $wakil->count()) * 100;
+                            @endphp
+                            <div class="absolute top-0 w-[{{ $waka_width }}%] h-px bg-slate-300 hidden md:block"></div>
+                        @endif
+                        
+                        <div class="flex flex-col md:flex-row justify-center w-full pt-10 md:pt-10 gap-10 relative">
+                            @foreach($wakil as $member)
+                            <div class="flex flex-col items-center relative w-full md:w-auto md:flex-1 max-w-xs">
+                                @if($wakil->count() > 1)
+                                    <div class="absolute -top-10 w-px h-10 bg-slate-300 hidden md:block"></div>
+                                @endif
+                                <div class="text-center">
+                                    <div class="relative w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-5 group">
+                                        <div class="absolute -inset-[3px] rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-500"></div>
+                                        <div class="absolute -inset-[3px] bottom-[-10px] sm:bottom-[-12px] rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-500 transition-transform duration-300 group-hover:scale-105"></div>
+                                        <div class="absolute inset-0 rounded-full bg-[#f4f5f7] scale-[1.05]"></div>
+                                        <div class="relative w-full h-full rounded-full overflow-hidden z-10 border-[3px] border-white bg-slate-200">
+                                            @if($member->photo)
+                                                <img src="{{ asset('storage/' . $member->photo) }}" alt="{{ $member->position }}" class="w-full h-full object-cover">
+                                            @else
+                                                <div class="w-full h-full flex items-center justify-center text-slate-400 bg-white"><i class="fa-solid fa-book-open text-4xl"></i></div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <h3 class="font-black text-slate-800 uppercase tracking-widest text-[13px] sm:text-[14px] mb-1 line-clamp-1 px-2" title="{{ $member->name }}">{{ $member->name }}</h3>
+                                    <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium uppercase tracking-widest">{{ $member->position }}</p>
                                 </div>
-                            @endif
-                            <div>
-                                <h3 class="font-bold text-lg text-slate-800">{{ $global_settings['structure_komite_name'] ?? 'H. Nama Komite, S.Pd., M.Si' }}</h3>
-                                <p class="text-rose-500 font-medium text-sm">Ketua Komite Sekolah</p>
+                                
+                                <!-- Line going down from Middle Waka to Level 3 -->
+                                @if($staf->count() > 0 && $loop->iteration == ceil($wakil->count() / 2))
+                                    <div class="w-px h-10 sm:h-14 bg-slate-300 mt-3 hidden md:block"></div>
+                                @endif
                             </div>
+                            @endforeach
                         </div>
+                    </div>
+                    @endif
+
+                    @if($staf->count() > 0)
+                    <!-- LEVEL 3 (Staf) -->
+                    <div class="relative flex flex-col items-center w-full mt-10 md:mt-0">
+                        <!-- Horizontal Line for Level 3 -->
+                        @if($staf->count() > 1)
+                            @php
+                                $staf_width = (($staf->count() - 1) / $staf->count()) * 100;
+                            @endphp
+                            <div class="absolute top-0 w-[{{ $staf_width }}%] h-px bg-slate-300 hidden md:block"></div>
+                        @endif
                         
-                        <div class="bg-white border border-slate-100 shadow-lg rounded-2xl p-6 flex items-center gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-l-slate-700">
-                            @if(isset($global_settings['structure_tu_photo']) && $global_settings['structure_tu_photo'])
-                                <img src="{{ asset('storage/' . $global_settings['structure_tu_photo']) }}" alt="Kepala TU" class="w-16 h-16 object-cover rounded-2xl shadow-sm flex-shrink-0 border border-slate-200">
-                            @else
-                                <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-700 text-2xl flex-shrink-0">
-                                    <i class="fa-solid fa-file-signature"></i>
+                        <div class="flex flex-wrap justify-center w-full gap-8 md:gap-6 pt-0 md:pt-10 relative">
+                            @foreach($staf as $member)
+                            <div class="flex flex-col items-center relative w-1/2 md:w-auto md:flex-1 max-w-[240px]">
+                                @if($staf->count() > 1)
+                                    <div class="absolute -top-10 w-px h-10 bg-slate-300 hidden md:block"></div>
+                                @endif
+                                <div class="text-center w-full">
+                                    <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-5 group">
+                                        <div class="absolute -inset-[3px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                                        <div class="absolute -inset-[3px] bottom-[-8px] sm:bottom-[-10px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-transform duration-300 group-hover:scale-105"></div>
+                                        <div class="absolute inset-0 rounded-full bg-[#f4f5f7] scale-[1.06]"></div>
+                                        <div class="relative w-full h-full rounded-full overflow-hidden z-10 border-[2px] sm:border-[3px] border-white bg-slate-200">
+                                            @if($member->photo)
+                                                <img src="{{ asset('storage/' . $member->photo) }}" alt="{{ $member->position }}" class="w-full h-full object-cover">
+                                            @else
+                                                <div class="w-full h-full flex items-center justify-center text-slate-400 bg-white"><i class="fa-solid fa-users text-3xl"></i></div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <h3 class="font-black text-slate-800 uppercase tracking-widest text-[12px] sm:text-[13px] mb-1 line-clamp-1 px-1" title="{{ $member->name }}">{{ $member->name }}</h3>
+                                    <p class="text-[9px] sm:text-[10px] text-slate-500 font-medium uppercase tracking-widest">{{ $member->position }}</p>
                                 </div>
-                            @endif
-                            <div>
-                                <h3 class="font-bold text-lg text-slate-800">{{ $global_settings['structure_tu_name'] ?? 'Nama Kepala TU, S.E' }}</h3>
-                                <p class="text-slate-600 font-medium text-sm">Kepala Tata Usaha</p>
                             </div>
+                            @endforeach
                         </div>
                     </div>
+                    @endif
 
-                    <!-- PENGHUBUNG KE WAKASEK -->
-                    <div class="hidden md:flex justify-center -my-12 relative z-0">
-                        <div class="w-px h-16 bg-slate-200"></div>
-                    </div>
-
-                    <!-- Level 3: Wakil Kepala Sekolah -->
-                    <div class="relative pt-8 md:pt-4">
-                        <!-- Garis Horizontal Penghubung (Hanya Desktop) -->
-                        <div class="absolute top-4 left-[12.5%] w-[75%] h-px bg-slate-200 hidden md:block"></div>
-                        <div class="absolute top-4 left-[12.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
-                        <div class="absolute top-4 left-[37.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
-                        <div class="absolute top-4 left-[62.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
-                        <div class="absolute top-4 left-[87.5%] w-px h-6 bg-slate-200 hidden md:block"></div>
-                        
-                        <h3 class="text-center font-bold text-slate-400 uppercase tracking-widest text-sm mb-6 mt-2 relative inline-block mx-auto w-full md:bg-slate-50 md:z-10">Jajaran Wakil Kepala Sekolah</h3>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <!-- Waka Kurikulum -->
-                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-blue-500 group relative overflow-hidden">
-                                <div class="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                @if(isset($global_settings['structure_waka_kurikulum_photo']) && $global_settings['structure_waka_kurikulum_photo'])
-                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_kurikulum_photo']) }}" alt="Waka Kurikulum" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-blue-200 group-hover:scale-110 transition-transform duration-300">
-                                @else
-                                    <div class="w-14 h-14 bg-blue-50 rounded-full mx-auto flex items-center justify-center mb-4 text-blue-500 text-xl relative z-10 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 border border-blue-100">
-                                        <i class="fa-solid fa-book-open"></i>
-                                    </div>
-                                @endif
-                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">{{ $global_settings['structure_waka_kurikulum_name'] ?? 'Nama Waka Kurikulum, S.Pd' }}</h4>
-                                <p class="text-xs font-semibold text-blue-600 relative z-10">Urusan Kurikulum</p>
-                            </div>
-
-                            <!-- Waka Kesiswaan -->
-                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-blue-500 group relative overflow-hidden">
-                                <div class="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                @if(isset($global_settings['structure_waka_kesiswaan_photo']) && $global_settings['structure_waka_kesiswaan_photo'])
-                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_kesiswaan_photo']) }}" alt="Waka Kesiswaan" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-blue-200 group-hover:scale-110 transition-transform duration-300">
-                                @else
-                                    <div class="w-14 h-14 bg-blue-50 rounded-full mx-auto flex items-center justify-center mb-4 text-blue-500 text-xl relative z-10 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 border border-blue-100">
-                                        <i class="fa-solid fa-users"></i>
-                                    </div>
-                                @endif
-                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">{{ $global_settings['structure_waka_kesiswaan_name'] ?? 'Nama Waka Kesiswaan, S.Pd' }}</h4>
-                                <p class="text-xs font-semibold text-blue-600 relative z-10">Urusan Kesiswaan</p>
-                            </div>
-
-                            <!-- Waka Sarpras -->
-                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-amber-500 group relative overflow-hidden">
-                                <div class="absolute inset-0 bg-amber-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                @if(isset($global_settings['structure_waka_sarpras_photo']) && $global_settings['structure_waka_sarpras_photo'])
-                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_sarpras_photo']) }}" alt="Waka Sarpras" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-amber-200 group-hover:scale-110 transition-transform duration-300">
-                                @else
-                                    <div class="w-14 h-14 bg-amber-50 rounded-full mx-auto flex items-center justify-center mb-4 text-amber-500 text-xl relative z-10 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300 border border-amber-100">
-                                        <i class="fa-solid fa-building"></i>
-                                    </div>
-                                @endif
-                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">{{ $global_settings['structure_waka_sarpras_name'] ?? 'Nama Waka Sarpras, S.Pd' }}</h4>
-                                <p class="text-xs font-semibold text-amber-600 relative z-10">Urusan Sarana & Prasarana</p>
-                            </div>
-
-                            <!-- Waka Humas -->
-                            <div class="bg-white border border-slate-100 shadow-md rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300 border-t-4 border-t-purple-500 group relative overflow-hidden">
-                                <div class="absolute inset-0 bg-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                @if(isset($global_settings['structure_waka_humas_photo']) && $global_settings['structure_waka_humas_photo'])
-                                    <img src="{{ asset('storage/' . $global_settings['structure_waka_humas_photo']) }}" alt="Waka Humas" class="w-14 h-14 object-cover rounded-full mx-auto mb-4 relative z-10 shadow-sm border border-purple-200 group-hover:scale-110 transition-transform duration-300">
-                                @else
-                                    <div class="w-14 h-14 bg-purple-50 rounded-full mx-auto flex items-center justify-center mb-4 text-purple-500 text-xl relative z-10 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300 border border-purple-100">
-                                        <i class="fa-solid fa-handshake"></i>
-                                    </div>
-                                @endif
-                                <h4 class="font-bold text-slate-800 mb-1 relative z-10">{{ $global_settings['structure_waka_humas_name'] ?? 'Nama Waka Humas, S.Pd' }}</h4>
-                                <p class="text-xs font-semibold text-purple-600 relative z-10">Urusan Humas</p>
-                            </div>
+                    @if($pimpinan->count() == 0 && $wakil->count() == 0 && $staf->count() == 0)
+                    <div class="text-center py-20">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-slate-200 text-slate-400 mb-4">
+                            <i class="fa-solid fa-sitemap text-3xl"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-slate-700 mb-2">Belum Ada Data</h3>
+                        <p class="text-slate-500">Data struktur organisasi belum ditambahkan oleh administrator.</p>
                     </div>
+                    @endif
+
                 </div>
                 
             </div>

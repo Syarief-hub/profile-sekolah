@@ -32,7 +32,12 @@ Route::get('/dashboard', function () {
 
 Route::view('/profil/sejarah', 'profil.sejarah')->name('profil.sejarah');
 Route::view('/profil/visi-misi', 'profil.visi-misi')->name('profil.visi-misi');
-Route::view('/profil/struktur-organisasi', 'profil.struktur-organisasi')->name('profil.struktur-organisasi');
+Route::get('/profil/struktur-organisasi', function () {
+    $pimpinan = \App\Models\OrganizationMember::where('category', 'Pimpinan')->orderBy('order')->get();
+    $wakil = \App\Models\OrganizationMember::where('category', 'Wakil')->orderBy('order')->get();
+    $staf = \App\Models\OrganizationMember::where('category', 'Staf')->orderBy('order')->get();
+    return view('profil.struktur-organisasi', compact('pimpinan', 'wakil', 'staf'));
+})->name('profil.struktur-organisasi');
 Route::get('/profil/fasilitas', function () {
     $dbFacilities = \App\Models\Facility::all()->groupBy('category');
     return view('profil.fasilitas', compact('dbFacilities'));
@@ -63,6 +68,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('extracurriculars', \App\Http\Controllers\Admin\ExtracurricularController::class)->except(['show']);
     Route::resource('achievements', \App\Http\Controllers\Admin\AchievementController::class)->except(['show']);
     Route::resource('facilities', \App\Http\Controllers\Admin\FacilityController::class)->except(['show']);
+    Route::resource('organization-members', \App\Http\Controllers\Admin\OrganizationMemberController::class)->except(['show']);
     // Settings Manager
     Route::get('/settings/sekolah', [SettingController::class, 'editSekolah'])->name('settings.sekolah');
     Route::put('/settings/sekolah', [SettingController::class, 'updateSekolah'])->name('settings.sekolah.update');

@@ -240,21 +240,45 @@ class SettingController extends Controller
     public function updateOsisMpk(Request $request)
     {
         $validated = $request->validate([
+            'osis_sambutan' => 'nullable|string',
+            'osis_sambutan_photo' => 'nullable|image|max:5120',
+            'ketua_osis_name' => 'nullable|string|max:255',
+            'ketua_osis_role' => 'nullable|string|max:255',
+            'ketua_osis_photo' => 'nullable|image|max:5120',
+            'osis_photo' => 'nullable|image|max:5120',
+            'mpk_photo' => 'nullable|image|max:5120',
             'osis_description' => 'required|string',
             'mpk_description' => 'required|string',
             'osis_vision' => 'required|string',
             'osis_mission' => 'required|string',
             'osis_program_1_title' => 'required|string|max:255',
             'osis_program_1_desc' => 'required|string',
+            'osis_program_1_photo' => 'nullable|image|max:5120',
             'osis_program_2_title' => 'required|string|max:255',
             'osis_program_2_desc' => 'required|string',
+            'osis_program_2_photo' => 'nullable|image|max:5120',
             'osis_program_3_title' => 'required|string|max:255',
             'osis_program_3_desc' => 'required|string',
+            'osis_program_3_photo' => 'nullable|image|max:5120',
         ]);
 
+        $photoFields = ['osis_sambutan_photo', 'ketua_osis_photo', 'osis_photo', 'mpk_photo', 'osis_program_1_photo', 'osis_program_2_photo', 'osis_program_3_photo'];
+
         foreach ($validated as $key => $value) {
-            $type = ($key === 'osis_mission') ? 'longtext' : 'text';
-            Setting::updateOrCreate(['key' => $key], ['value' => $value, 'type' => $type]);
+            if (in_array($key, $photoFields)) continue; // Handle separately
+            $type = in_array($key, ['osis_mission', 'osis_sambutan']) ? 'longtext' : 'text';
+            Setting::updateOrCreate(['key' => $key], ['value' => $value ?? '', 'type' => $type]);
+        }
+
+        foreach ($photoFields as $key) {
+            if ($request->hasFile($key)) {
+                $setting = Setting::where('key', $key)->first();
+                if ($setting && $setting->value) {
+                    Storage::disk('public')->delete($setting->value);
+                }
+                $path = $request->file($key)->store('settings', 'public');
+                Setting::updateOrCreate(['key' => $key], ['value' => $path, 'type' => 'image']);
+            }
         }
 
         return redirect()->route('admin.settings.osismpk')->with('success', 'Profil OSIS & MPK berhasil diperbarui.');
