@@ -64,8 +64,9 @@
                             </div>
                             <x-nav-item route="admin.settings.sekolah" routeGroup="admin.settings.sekolah" icon="fa-solid fa-microphone-lines" label="Profil Sambutan" />
                             <x-nav-item route="admin.settings.sejarah" routeGroup="admin.settings.sejarah" icon="fa-solid fa-clock-rotate-left" label="Sejarah Sekolah" />
+                            <x-nav-item route="admin.settings.visimisi" routeGroup="admin.settings.visimisi" icon="fa-solid fa-bullseye" label="Visi & Misi" />
                             <x-nav-item route="admin.settings.struktur" routeGroup="admin.settings.struktur" icon="fa-solid fa-sitemap" label="Struktur Organisasi" />
-                            
+                            <x-nav-item route="admin.facilities.index" routeGroup="admin.facilities.*" icon="fa-solid fa-building" label="Fasilitas Sekolah" />                            
                             <div class="pt-6 pb-2">
                                 <span class="text-xs font-bold uppercase tracking-wider text-slate-400 pl-4">Akademik & Kesiswaan</span>
                             </div>

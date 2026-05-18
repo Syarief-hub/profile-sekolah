@@ -8,14 +8,14 @@ use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    // Get latest 3 published articles for the welcome page
+    // Get latest 4 published articles for the welcome page
     $latest_articles = \App\Models\Article::latest('date')
-        ->take(3)
+        ->take(4)
         ->get();
         
-    // Get latest 3 galleries for the welcome page
+    // Get latest 4 galleries for the welcome page
     $latest_galleries = \App\Models\Gallery::latest()
-        ->take(3)
+        ->take(4)
         ->get();
 
     return view('welcome', compact('latest_articles', 'latest_galleries'));
@@ -33,8 +33,10 @@ Route::get('/dashboard', function () {
 Route::view('/profil/sejarah', 'profil.sejarah')->name('profil.sejarah');
 Route::view('/profil/visi-misi', 'profil.visi-misi')->name('profil.visi-misi');
 Route::view('/profil/struktur-organisasi', 'profil.struktur-organisasi')->name('profil.struktur-organisasi');
-Route::view('/profil/fasilitas', 'profil.fasilitas')->name('profil.fasilitas');
-
+Route::get('/profil/fasilitas', function () {
+    $dbFacilities = \App\Models\Facility::all()->groupBy('category');
+    return view('profil.fasilitas', compact('dbFacilities'));
+})->name('profil.fasilitas');
 // Akademik Routes
 Route::get('/akademik/guru-staf', [PageController::class, 'guruStaf'])->name('akademik.guru-staf');
 Route::view('/akademik/kurikulum', 'akademik.kurikulum')->name('akademik.kurikulum');
@@ -60,14 +62,16 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('employees', \App\Http\Controllers\Admin\EmployeeController::class)->except(['show']);
     Route::resource('extracurriculars', \App\Http\Controllers\Admin\ExtracurricularController::class)->except(['show']);
     Route::resource('achievements', \App\Http\Controllers\Admin\AchievementController::class)->except(['show']);
-    
+    Route::resource('facilities', \App\Http\Controllers\Admin\FacilityController::class)->except(['show']);
     // Settings Manager
     Route::get('/settings/sekolah', [SettingController::class, 'editSekolah'])->name('settings.sekolah');
     Route::put('/settings/sekolah', [SettingController::class, 'updateSekolah'])->name('settings.sekolah.update');
-    Route::get('/settings/struktur', [SettingController::class, 'editStruktur'])->name('settings.struktur');
-    Route::put('/settings/struktur', [SettingController::class, 'updateStruktur'])->name('settings.struktur.update');
     Route::get('/settings/sejarah', [SettingController::class, 'editSejarah'])->name('settings.sejarah');
     Route::put('/settings/sejarah', [SettingController::class, 'updateSejarah'])->name('settings.sejarah.update');
+    Route::get('/settings/struktur', [SettingController::class, 'editStruktur'])->name('settings.struktur');
+    Route::put('/settings/struktur', [SettingController::class, 'updateStruktur'])->name('settings.struktur.update');
+    Route::get('/settings/visi-misi', [SettingController::class, 'editVisiMisi'])->name('settings.visimisi');
+    Route::put('/settings/visi-misi', [SettingController::class, 'updateVisiMisi'])->name('settings.visimisi.update');
     Route::get('/settings/osismpk', [SettingController::class, 'editOsisMpk'])->name('settings.osismpk');
     Route::put('/settings/osismpk', [SettingController::class, 'updateOsisMpk'])->name('settings.osismpk.update');
     Route::get('/settings/kurikulum', [SettingController::class, 'editKurikulum'])->name('settings.kurikulum');

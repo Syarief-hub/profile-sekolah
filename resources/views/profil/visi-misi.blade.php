@@ -40,30 +40,52 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- Visi Section -->
-            <div class="bg-blue-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-8 md:p-12 mb-16 relative overflow-hidden group">
+            <div class="bg-blue-50 rounded-[2.5rem] shadow-xl shadow-primary/5 border-[8px] border-white p-6 md:p-10 mb-16 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-primary/10 transition duration-700"></div>
                 
-                <div class="flex items-center gap-4 mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100">
-                        <i class="fa-solid fa-eye"></i>
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 relative z-10 items-center">
+                    <!-- Foto Visi (Sebelah Kiri) -->
+                    <div class="w-full lg:w-5/12 shrink-0">
+                        <div class="rounded-3xl overflow-hidden shadow-xl border-[6px] border-white h-full relative group/img">
+                            @php
+                                $visiImage = isset($global_settings['visi_image']) && $global_settings['visi_image'] 
+                                            ? (str_starts_with($global_settings['visi_image'], 'http') ? $global_settings['visi_image'] : asset('storage/' . $global_settings['visi_image']))
+                                            : 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop';
+                            @endphp
+                            <img src="{{ $visiImage }}" alt="Visi Sekolah" class="w-full h-full object-cover aspect-[4/5] lg:aspect-auto lg:h-[500px] group-hover/img:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider bg-primary/90 backdrop-blur-md px-3 py-1 rounded-full mb-2">
+                                    <i class="fa-solid fa-eye"></i> Fokus Kami
+                                </div>
+                                <h3 class="font-heading font-black text-2xl leading-tight">Cita-Cita Masa Depan</h3>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Visi Sekolah</h2>
-                </div>
-                
-                <div class="relative z-10">
-                    <p class="text-slate-600 text-lg leading-relaxed text-justify mb-8">
-                        Perkembangan dan tantangan masa depan seperti perkembangan ilmu pengetahuan dan teknologi, globalisasi yang sangat cepat, era informasi dan budaya kesadaran masyarakat dan orang tua terhadap pendidikan memicu sekolah untuk merespon tantangan sekaligus peluang itu. SMA Negeri 1 Suwawa memiliki citra moral yang menggambarkan profil sekolah yang diinginkan dimasa depan yang diwujudkan dalam visi sekolah sebagai berikut :
-                    </p>
-                    
-                    <blockquote class="bg-white border-l-4 border-primary p-6 md:p-8 rounded-r-3xl rounded-bl-3xl italic text-xl md:text-3xl font-heading font-bold text-slate-800 text-center leading-snug shadow-sm relative mt-8 mb-8">
-                        <i class="fa-solid fa-quote-left absolute top-4 left-4 text-slate-200 text-3xl"></i>
-                        "Mewujudkan Peserta Didik yang Cerdas, Unggul, dan Berbudaya Lingkungan"
-                        <i class="fa-solid fa-quote-right absolute bottom-4 right-4 text-slate-200 text-3xl"></i>
-                    </blockquote>
-                    
-                    <p class="text-slate-600 text-lg leading-relaxed text-justify mt-8">
-                        Visi tersebut mencerminkan cita-cita sekolah yang berorientasi ke depan dengan memperhatikan potensi kekinian, sesuai dengan norma dan harapan masyarakat. Untuk mewujudkan, sekolah menentukan langkah-langkah strategis yang dinyatakan dalam Misi berikut:
-                    </p>
+
+                    <!-- Konten Visi (Sebelah Kanan) -->
+                    <div class="w-full lg:flex-1">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-white text-primary rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-blue-100 shrink-0">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Visi Sekolah</h2>
+                        </div>
+                        
+                        <p class="text-slate-600 text-lg leading-relaxed text-justify mb-6">
+                            Perkembangan dan tantangan masa depan seperti perkembangan ilmu pengetahuan dan teknologi, globalisasi yang sangat cepat, era informasi dan budaya kesadaran masyarakat dan orang tua terhadap pendidikan memicu sekolah untuk merespon tantangan sekaligus peluang itu. SMA Negeri 1 Suwawa memiliki citra moral yang menggambarkan profil sekolah yang diinginkan dimasa depan yang diwujudkan dalam visi sekolah sebagai berikut :
+                        </p>
+                        
+                        <blockquote class="bg-white border-l-4 border-primary p-6 md:p-8 rounded-r-3xl rounded-bl-3xl italic text-xl md:text-2xl font-heading font-bold text-slate-800 text-center leading-snug shadow-sm relative mt-8 mb-8">
+                            <i class="fa-solid fa-quote-left absolute top-4 left-4 text-slate-200 text-2xl"></i>
+                            "Mewujudkan Peserta Didik yang Cerdas, Unggul, dan Berbudaya Lingkungan"
+                            <i class="fa-solid fa-quote-right absolute bottom-4 right-4 text-slate-200 text-2xl"></i>
+                        </blockquote>
+                        
+                        <p class="text-slate-600 text-lg leading-relaxed text-justify mt-8">
+                            Visi tersebut mencerminkan cita-cita sekolah yang berorientasi ke depan dengan memperhatikan potensi kekinian, sesuai dengan norma dan harapan masyarakat. Untuk mewujudkan, sekolah menentukan langkah-langkah strategis yang dinyatakan dalam Misi berikut:
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -74,6 +96,21 @@
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
                     <h2 class="text-3xl font-heading font-black text-slate-800 tracking-tight">Misi Sekolah</h2>
+                </div>
+
+                <!-- Foto Kedua (Di atas Misi) -->
+                <div class="w-full h-64 md:h-80 lg:h-96 rounded-3xl overflow-hidden mb-10 shadow-xl border-[6px] border-white relative group">
+                    @php
+                        $misiImage = isset($global_settings['misi_image']) && $global_settings['misi_image'] 
+                                    ? (str_starts_with($global_settings['misi_image'], 'http') ? $global_settings['misi_image'] : asset('storage/' . $global_settings['misi_image']))
+                                    : 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop';
+                    @endphp
+                    <img src="{{ $misiImage }}" alt="Misi Sekolah" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/10 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-center text-white">
+                        <h3 class="font-heading font-black text-3xl md:text-4xl drop-shadow-lg mb-2">Membangun Karakter & Prestasi</h3>
+                        <p class="text-white/90 font-medium tracking-wide">Langkah strategis menuju masa depan gemilang</p>
+                    </div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">

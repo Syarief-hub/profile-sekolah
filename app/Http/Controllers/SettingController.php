@@ -150,12 +150,80 @@ class SettingController extends Controller
     public function updateSejarah(Request $request)
     {
         $validated = $request->validate([
+            'sejarah_title' => 'nullable|string|max:255',
             'sejarah_content' => 'required|string',
+            'sejarah_images' => 'nullable|array|max:4',
+            'sejarah_images.*' => 'image|mimes:jpeg,png,jpg,webp|max:5120',
         ]);
 
+        Setting::updateOrCreate(['key' => 'sejarah_title'], ['value' => $validated['sejarah_title'], 'type' => 'text']);
         Setting::updateOrCreate(['key' => 'sejarah_content'], ['value' => $validated['sejarah_content'], 'type' => 'longtext']);
 
+        if ($request->hasFile('sejarah_images')) {
+            $setting = Setting::where('key', 'sejarah_images')->first();
+            
+            if ($setting && $setting->value) {
+                $oldImages = json_decode($setting->value, true);
+                if (is_array($oldImages)) {
+                    foreach ($oldImages as $oldImage) {
+                        if (!str_starts_with($oldImage, 'http')) {
+                            Storage::disk('public')->delete($oldImage);
+                        }
+                    }
+                }
+            }
+
+            $paths = [];
+            foreach ($request->file('sejarah_images') as $file) {
+                $paths[] = $file->store('settings', 'public');
+            }
+
+            Setting::updateOrCreate(
+                ['key' => 'sejarah_images'],
+                ['value' => json_encode($paths), 'type' => 'json']
+            );
+        }
+
         return redirect()->route('admin.settings.sejarah')->with('success', 'Informasi Sejarah berhasil diperbarui.');
+    }
+
+    public function editVisiMisi()
+    {
+        $settingsRaw = Setting::all();
+        $settings = [];
+        foreach ($settingsRaw as $setting) {
+            $settings[$setting->key] = $setting->value;
+        }
+
+        return view('admin.settings.visimisi', compact('settings'));
+    }
+
+    public function updateVisiMisi(Request $request)
+    {
+        $validated = $request->validate([
+            'visi_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'misi_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+        ]);
+
+        if ($request->hasFile('visi_image')) {
+            $setting = Setting::where('key', 'visi_image')->first();
+            if ($setting && $setting->value && !str_starts_with($setting->value, 'http')) {
+                Storage::disk('public')->delete($setting->value);
+            }
+            $path = $request->file('visi_image')->store('settings', 'public');
+            Setting::updateOrCreate(['key' => 'visi_image'], ['value' => $path, 'type' => 'image']);
+        }
+
+        if ($request->hasFile('misi_image')) {
+            $setting = Setting::where('key', 'misi_image')->first();
+            if ($setting && $setting->value && !str_starts_with($setting->value, 'http')) {
+                Storage::disk('public')->delete($setting->value);
+            }
+            $path = $request->file('misi_image')->store('settings', 'public');
+            Setting::updateOrCreate(['key' => 'misi_image'], ['value' => $path, 'type' => 'image']);
+        }
+
+        return redirect()->route('admin.settings.visimisi')->with('success', 'Foto Visi & Misi berhasil diperbarui.');
     }
 
     public function editOsisMpk()

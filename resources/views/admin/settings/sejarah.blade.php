@@ -28,15 +28,39 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('admin.settings.sejarah.update') }}" method="POST">
+                    <form action="{{ route('admin.settings.sejarah.update') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         
                         <div class="mb-6">
+                            <label for="sejarah_images" class="block text-gray-700 text-sm font-bold mb-2">Foto Sejarah (Kolase)</label>
+                            @php
+                                $sejarah_images = isset($settings['sejarah_images']) ? json_decode($settings['sejarah_images'], true) : [];
+                            @endphp
+                            @if(!empty($sejarah_images))
+                                <div class="mb-4 grid grid-cols-3 gap-3">
+                                    @foreach($sejarah_images as $img)
+                                    <img src="{{ str_starts_with($img, 'http') ? $img : asset('storage/' . $img) }}" alt="Foto Sejarah" class="w-full h-24 object-cover rounded-lg shadow-sm border border-slate-200">
+                                    @endforeach
+                                </div>
+                            @endif
+                            <input type="file" name="sejarah_images[]" id="sejarah_images" accept="image/*" multiple class="w-full rounded-xl border border-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 transition cursor-pointer">
+                            <p class="mt-2 text-xs text-slate-500">Pilih 3 hingga 4 foto terbaik untuk membuat kolase yang indah. Mengunggah foto baru akan menggantikan foto lama. Format: JPG, PNG. Maks 5MB per file.</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="sejarah_title" class="block text-gray-700 text-sm font-bold mb-2">
+                                Judul / Tema Sejarah (Opsional)
+                            </label>
+                            <p class="text-sm text-gray-500 mb-3">Teks ini akan otomatis ditampilkan dengan jenis font yang berbeda dan ukuran lebih besar di halaman utama.</p>
+                            <input type="text" name="sejarah_title" id="sejarah_title" value="{{ old('sejarah_title', $settings['sejarah_title'] ?? '') }}" placeholder="Contoh: Menelusuri Jejak Awal Mula..." class="shadow-sm border-slate-200 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition">
+                        </div>
+
+                        <div class="mb-6">
                             <label for="sejarah_content" class="block text-gray-700 text-sm font-bold mb-2 border-b pb-2">
                                 Konten Sejarah Sekolah
                             </label>
-                            <p class="text-sm text-gray-500 mb-3">Anda dapat menggunakan tag HTML untuk memformat teks (misalnya: &lt;p&gt;, &lt;strong&gt;, &lt;br&gt;).</p>
+                            <p class="text-sm text-gray-500 mb-3">Cukup ketikkan teks secara biasa tanpa kode HTML. Tekan tombol <kbd class="px-2 py-1 bg-gray-100 border rounded text-xs">Enter</kbd> pada keyboard Anda untuk membuat paragraf atau baris baru.</p>
                             <textarea name="sejarah_content" id="sejarah_content" rows="15" class="shadow-sm border-slate-200 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition" required>{{ old('sejarah_content', $settings['sejarah_content'] ?? '') }}</textarea>
                         </div>
 
